@@ -1,0 +1,96 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .row{
+      border: 1px solid black;
+      
+
+    }
+    .form-control
+    {
+      width: 40%;
+      height: 20px;
+    }
+
+    .label {
+    /* Other styling.. */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+     .nav{
+       height: 0px;
+     }
+
+    </style>
+</head>
+<body>
+<div class="container">
+  <div style="background-color:lightgreen" class="row"><br>
+      
+    <div class="col-md-4">
+          <div class="form-horizontal">
+            <div class="form-group">
+                <label class="col-md-6">
+                    First Name : 
+                </label>
+                  <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-6">
+                    Last Name :
+                </label>
+                  <input type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-6">
+                D.O.B :
+              </label>
+              <input type="text" class="form-control">
+          </div>
+      </div>
+      
+  </div>
+
+
+<div class="col-md-8">
+
+  <ul class="nav" class="nav nav-tabs">
+    <li class="active"><a href="#">Contact Info</a></li>
+    <li class="active"><a href="#">Address</a></li>
+    <li class="active"><a href="#">Pri Subscriber</a></li>
+    <li class="active"><a href="#">Pri insurance</a></li>
+    <li class="active"><a href="#">Sec Subscriber</a></li>
+    <li class="active"><a href="#">Sec insurance</a></li>
+  </ul>
+
+<surgery-create></surgery-create>
+  
+</div>
+</div>
+
+
+
+<div style="height:35px" background-color="white" class="row">
+  <div class="col-md-2">
+     <label>Surgery Date/Time</label>
+  </div>
+</div>
+</div>
+
+
+
+</body>
+</html>
