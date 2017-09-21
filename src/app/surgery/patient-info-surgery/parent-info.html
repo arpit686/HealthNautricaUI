@@ -1,0 +1,1118 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+
+<html>
+<head>
+<style type="text/css">
+
+
+  body  {font-family:verdana;font-size:9pt;font-weight:500;font-style:normal;color:black;background-color:#FBF8EF;margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;}
+  table {font-family:verdana;font-size:8pt;font-weight:500;font-style:normal;color:black;background-color:#FBF8EF}
+
+  td.print {font-family:verdana;font-size:6pt;font-weight:500;font-style:normal;color:black;background-color:#FBF8EF}
+  th.print    {font-family:verdana;font-size:6pt;font-weight:lighter;font-style:normal;color:#282891;background-color:#E5E5AC}
+  th    {font-family:verdana;font-size:8pt;font-weight:light;font-style:normal;color:#282891;background-color:#E5E5AC}
+  hr    {color:#E3B548}
+
+  IMG	  {cursor:hand}
+  .header    {font-family:verdana;font-size:9pt;font-weight:500;font-style:normal;color:black; background-image:URL("/surgery/images/page_pat_header.gif")}
+  .subheader {font-family:verdana;font-size:9pt;font-weight:500;font-style:normal;color:#282891; background-color:#E5E5AC}
+  .button {font-family:verdana;font-size:9pt;color:#282891;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:100px}
+  .longButton {font-family:verdana;font-size:9pt;color:#282891;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:120px}
+  .veryLongButton {font-family:verdana;font-size:9pt;color:#282891;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:180px}
+  .smallButton {font-family:verdana;font-size:8pt;color:#282891;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:100px; height:18}
+  .grayButton {font-family:verdana;font-size:9pt;color:#282891;font-weight:bold;background-color:lightGray;border-style:groove; width:100px}
+  .srvcHeader    {font-family:verdana;font-size:8pt;font-weight:bold;font-style:normal;color:#282891}
+  table.border {font-family:verdana;font-size:9pt;font-weight:500;font-style:normal;color:black;background-color:#c8c851}
+  td.border {font-family:verdana;font-size:9pt;font-weight:500;font-style:normal;color:black;background-color:#FBF8EF}
+  .BigText { font-size:12pt;}
+  .BigBoldText { font-size:12pt;font-weight:bold;}
+  .BoldText { font-weight:bold;}
+  .Font10Text { font-size:10pt;}
+  .Font10BoldText { font-size:12pt;font-weight:bold;}
+
+  .ServiceOuterTable {border-width:0.1cm;border-style:solid;border-color:#E3B548}
+  .ServiceInnerTable {border-width:0.2cm;border-style:solid;border-color:#CECFCE}
+  .BorderTable {border-width:0.05cm;border-style:solid;border-color:#E3B548}
+  .ThickBorderTable {border-width:0.10cm;border-style:solid;border-color:#E3B548;}
+  IMG.HideRF {display:none;}
+  IMG.ShowRF {display:"";}
+  .highlight {background-color:yellow;}
+  .highlight-view {background-color:yellow;color:#993300;}
+  .normal-view {color:#993300;}
+  .readonly {background-color:#FAEBD7;}
+  .NotSyncWithEMR {border-style:solid;border-color:#ff0000;font-style:italic;border-width:2px;}
+
+  td.ClassPatBal {color:green;}
+  td.ClassInsBal {color:blue;}
+  td.ClassColBal {color:red;}
+
+  .OONFlag {background-color:yellow;color:#993300;font-size:10pt;font-weight:bold;}
+  .s_Inpatient 	{border-left:solid; border-width:8px; border-color:#FF0000}
+  .s_asc 	{border-left:solid; border-width:8px; border-color:#0000FF}
+   
+  .s_None			{border-left:solid; border-width:8px; border-color:#FBF8EF}
+
+  span.OT  a
+  {
+  pointer-events: none;
+  cursor: default;
+  display:block;
+  }
+  .mandatoryHeader { background-color:#DFFFFF}
+  .ToolTip
+  {
+  font-family:verdana;
+  font-size:8pt;
+  font-weight:normal;
+  font-style:normal;
+  color:black;
+  background-color:#E5E5AC;
+  }
+  textarea {text-transform:uppercase;}
+
+  .clsCPTList {width:100%; height:130px; overflow-x:hidden; overflow-y:auto}
+  .clsICDList {width:100%; height:130px; overflow-x:hidden; overflow-y:scroll}
+  .clsDivPage {width:95%; border-style:solid; border-width:0px; height:100%; margin:0 auto;}
+  .clsMedicalNessity{width:100%; border-style:solid; border-width:0px; height:250px; overflow-x:hidden; overflow-y:auto; background-color:#F5F5F5}
+  .clsDummyText {color:#D3D3D3}
+  .hide {display:none}
+
+  .button[disabled] {font-family:verdana;font-size:9pt;color:GrayText;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:100px}
+  .longButton[disabled] {font-family:verdana;font-size:9pt;color:GrayText;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:120px}
+  .veryLongButton[disabled]{font-family:verdana;font-size:9pt;color:GrayText;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:180px}
+  .smallButton[disabled] {font-family:verdana;font-size:8pt;color:GrayText;font-weight:bold;background-color:#E5E5AC;border-style:groove; width:100px; height:18}
+
+.view { font-family:arial; font-size:8pt; margin-left:0em; margin-right:0em; vertical-align:top;border-collapse:collapse;}
+.viewInner { font-family:arial; font-size:8pt; margin-left:0em; margin-right:0em; vertical-align:top; border-collapse:collapse;}
+td {vertical-align:top;}
+	.T	{color:#660000; }									/* Title */
+	.N	{color:#0000FF}									/* New Value */
+	.O	{color:#FF0000; text-decoration:line-through}	/* Old Value */
+	.OT	{color:#FF0000; text-decoration:line-through}		/* Old TextValue */
+	.U	{color:#000000}									/* Unchanged value */
+	.B  {font-weight:bold}
+	.Note {background-color:#DCDCDC}
+	
+@media printxx {
+	.N	{color:#000000}									/* New Value */
+	.O	{color:#000000; text-decoration:line-through}		/* Old Value */
+	.OT	{display:none}									/* Old TextValue */
+	.viewInner {border:0;}
+	.NoPrint1	{display:none}									/* Old TextValue */
+}
+.x{border:1px solid black; font-weight:bold;}
+.x1{background-color:#ffc000}
+
+</style>
+<script type = "text/javascript" src="../../common/jquery/js/jquery.js"></script>
+<script type="text/javascript" src="../../Common/CScripts/json2.js"></script>
+
+<STYLE type="text/css">
+  .small { font-size:8pt; margin-left:0em; margin-right:0em }
+  .medium { font-size:10pt; margin-left:0em; margin-right:0em }
+  .large { font-size:16pt; margin-left:0em; margin-right:0em }
+
+  input[type=text]  {text-transform:uppercase; height:20; font-size:9pt}
+  input.upperinput  {text-transform:uppercase; height:20; font-size:9pt}
+  textarea  {text-transform:uppercase; font-size:9pt}
+  select {height:20; font-size:9pt}
+  select.big {height:60;}
+  select.veryBig {height:100;}
+
+  .shod1 {font-size:12pt;filter:blur(DIRECTION=45, strength=3, positive=false) ; }
+  .shod2 {font-size:10pt;font-weight:bold; filter:alpha(opacity=100);}
+
+  .PatientFlag_A {background-color:black;color:yellow} 		/*Appointment Related*/
+  .PatientFlag_B {background-color:black;color:red}			/*Payment Related*/
+  .PatientFlag_C {background-color:#99FF99;color:black}		/*Preventive Care Overdue*/
+  .PatientFlag_D {background-color:#99FFFF;color:black}		/*HMO*/
+
+
+  input.Mandatory{background-color:#DFFFFF}
+  select.Mandatory{background-color:#DFFFFF}
+
+  @media print
+  {
+  .NoPrint {display:none}
+  }
+  
+  	.C_APPT_EMR {color:#0000FF }
+	.C_OBSOLETE {color:#FF0000 }
+	
+</STYLE>
+
+
+
+<!-- <script language = "javascript" src = "../../Common/CScripts/common.js" ></script>
+<script language = "javascript" src = "../cscripts/SurgeryRequest_PKH_RG.js" ></script>
+<script language = "javascript" src = "../cscripts/SurgeryRequest.js" ></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="../../common/jquery/css/smoothness/jquery-ui-custom.css" />
+<script type="text/javascript" src="../../common/jquery/js/jquery.js"></script>
+<script type="text/javascript" src="../../common/jquery/js/jquery-ui-custom.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="../cscripts/surgery_tabs.css" /> -->
+
+<script type="text/javascript">
+
+	function pageLoad() {
+		var frm = document.forms[0] ;
+		setTableBorder() ;
+		toggleAdmitForm() ;
+		setAntibioticOnLoad("","");
+		//setVenousTypeLoad("1");
+		setPatientTypeOnLoad("X")
+		setSpecialNeedsOnLoad("0") ;
+		if (frm.MinorPatient.value == "Y") {
+			frm.AntibioticType[0].checked = false ;
+			frm.AntibioticType[0].disabled = true ;
+		}
+		setLateralityOnLoad() ;
+		if (frm.SurgeonID.options.length == 1)
+			setAttendingPhysician() ;
+	}
+
+function getQuestionHelp(strCPT, strStatus, strDesc) {
+	//alert( "getQuestionHelp : " + strCPT + "-" + strStatus + "-" + strDesc) ;
+	if ( strStatus == "1") {
+		var img1= document.getElementById ("Img" + strCPT) ;
+		var objTd = img1.parentElement ;
+		var objHidden = objTd.childNodes[0] ;
+		if (objHidden != null) {
+				objHidden.value = "0" ;
+
+		}
+		if ( img1 != null) {
+			//alert("Image found") ;
+			img1.src = "https://dev.healthnautica.com/eOrder/images/fail.gif" ;
+		}
+		var finalImg = document.getElementById("finalImage")	 ;
+		if ( finalImg != null)
+			finalImg.src = "https://dev.healthnautica.com/eOrder/images/fail.gif" ;
+
+		var obj1 = document.forms[0].FinalResult ;
+		if (obj1 != null)	{
+			obj1.value = "0" ;
+		}
+
+	}
+}
+
+
+</script>
+<style>
+.ListPhyName {
+	width:150; height:60;
+	display:none;
+	position:absolute;
+	/* z-index:2; */
+	font-size:7pt ;
+}
+</style>
+
+ <Script Language=VBScript>
+
+// Function vbMsg(isTxt,isCaption)
+// 	testVal = MsgBox(isTxt,4,isCaption)
+// 	isChoice = testVal
+// End Function
+
+</Script> 
+
+  <script>
+	$(function() {
+		initializeJQuery() ;
+	});
+  </script>
+  
+</head>
+<body onload="pageLoad();">
+
+<table  id="pageHeader" class=header border="0" width="100%" cellspacing="0" cellpadding="0" height=50 background="">
+	<tr>
+		<td width="150" valign=center class=shod1> Patient Info  </td>
+		<td valign=center class=shod2 >   <font color=#997217> Surgery Request to PEKIN HOSPITAL for TEST PKH_RG0403 </font> </td>
+		<td width="10%" align=right>
+			
+			<img border="0" src="/common/images/print.gif" alt="Print" width="33" onClick="HandlePrint()" >
+			
+		</td>
+	</tr>
+</table>
+
+ <div
+ id="divMoreInfo"
+ style="z-index:2; position:absolute; visibility:hidden; width:300px; height:200px; border:solid; opacity:0.9; filter: alpha(opacity=100); background-color:#F1F1F1;">
+  <br/><table width=90% bgcolor=lightGray cellpadding=2 cellspacing=2 border=0>
+	<tr height=100%> <td>
+		<input type=hidden id=MoreInfoSrcContol value=""><input type=hidden id=MoreInfoSrcSpan value="">
+		<input type=hidden id=MoreInfoType value=""> <input type=hidden id=MoreInfoDescId value="">
+		<textarea rows=6 cols=32 id="MoreInfoContent" onKeyPress="makeUppercase();validateTextArea(this, 299);"></textarea>
+	</td> </tr>
+	<tr> <td bgcolor=#F1F1F1 align=center>
+		
+			<!-- <input type=button name=Copy id=btnCopyICDDesc class=button onclick=copyFromDescription() value=Copy> -->
+			<input type=button name=Continue class=button onclick=closeMoreInfo() value=Continue>
+		
+		<input type=button name=Cancel class=button onclick=cancelMoreInfo() value=Cancel>
+	</td></tr> </table>
+</div>
+<form  method="POST" style="margin:0px;">
+<input type=hidden name=UserAction value="ADD">
+<input type=hidden name=CompanyID value=31>
+<input type=hidden name=FacId value=18>
+<input type=hidden name=SiteId value=1956>
+<input type=hidden name=PatAcctNo value=1000006451>
+<input type=hidden name=RunMedNecessity value="0">
+<input type=hidden name=SurgeryId value="">
+<input type=hidden name=VersionNo value="1">
+<input type=hidden name=MinorPatient value="N">
+<input type=hidden name=CPTCount value="10">
+<input type=hidden name=DateChangeReason value="">
+<input type=hidden name=DraftMode value="Y">
+
+	<input type=hidden name=SurgeryCheckRule value="N">
+	<input type=hidden name=allowEorderSubmit value='Y'>
+	<input type=hidden name=ServerDate value='9/18/2017'>
+	<input type=hidden name=ServerTime value='6:11:38 AM'>
+	<input type=hidden name=FlgScheduler value='Y'>
+
+	<input type=hidden name=CommonFields value="">
+	<input type=hidden name=SurgeryDateChangeFlag value=0>
+	<input type=hidden name=OONFlag value=0>
+	
+<table width=95% id=tHeader border=0 align="center" style="background-color:#E5E5AC">
+	<tr>
+		<td valign=top width=30%>
+			<table  class=tabTD border=0 height=100% width=100% cellspacing=0 cellpadding=3 id=tHeaderNonTab style="background-color:#FBF8EF;">
+				<tr class=tabTD>
+					<td align=right> Last Name </td>
+					<td align=left> <input type=text name =PatLastName value="TEST" size=20 maxlength=20 id=PatLastName onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> <b> * </b> </td>
+				</tr> 
+				<tr class=tabTD>
+					<td align=right> First Name </td>
+					<td align=left>
+						<input type=text name =PatFirstName value="PKH_RG0403" size=20 maxlength=20 id=PatFirstName onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> <b> * </b>
+						&nbsp;&nbsp; MI
+						<input type="text" name =PatMiddleInit value=' ' size=2 maxlength=1 id=PatMiddleInit onkeypress='return makeUppercase()' >
+					</td>
+				</tr>
+				<tr class=tabTD>
+					<td align=right> DOB </td>
+					<td align=left> <input type=text class='upperinput' name =PatDOB value="1/1/1984" size=12 maxlength=12 id=PatDOB OnBlur='return isPastDate(this)'> <b> * </b> 
+						&nbsp;&nbsp; Age: 33 Years
+					</td>
+				</tr>
+				<tr class=tabTD>
+					<td  align=right> 
+					
+						SSN 
+					
+					</td>
+					<td align=left> 
+					<input type="text" name =PatSSN value='' size=11 maxlength=11 id=PatSSN onChange='return isValidSSN(this)' > &nbsp;&nbsp;&nbsp;
+					Gender &nbsp;&nbsp;<select name=PatGender size=0  class=mandatoryHeader id=PatGender ><option value='X'>Select<option value = 'M' selected>Male<option value = 'F'>Female</select> 
+					</td>
+				</tr>
+			</table> <!-- tHeaderNonTab -->
+		</td>
+		<td>
+			<div id="tabs"  style="background-color:#E5E5AC;" >
+				<ul>
+					<li><a href="#tabs_1"> <font size=1> Contact Info </font></a></li>
+					<li><a href="#tabs_2"><font size=1> Address</font></a></li>
+					<li><a href="#tabs_3"><font size=1> Pri Subscriber</font></a></li>
+					<li><a href="#tabs_4"><font size=1> Pri Insurance</font></a></li>
+					<li><a href="#tabs_5"><font size=1> Sec Subscriber</font></a></li>
+					<li><a href="#tabs_6"><font size=1> Sec Insurance</font></a></li>
+					<li><a href="#tabs_7"><font size=1> WorkComp Details</font></a></li>
+					<li><a href="#tabs_8"><font size=1> Auto Details</font></a></li>
+				</ul>
+				<div id="tabs_1" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right> Primary Phone </td>
+							<td align=left> 
+								<input type=text name =PatTelNo value="630-519-3558" size=12 maxlength=12 id=PatTelNo onChange='return isValidNANP(this)' onBlur='this.value = this.value.toUpperCase()'> <b> * </b>  &nbsp;&nbsp;&nbsp;
+								<select name=PrimaryPhoneType size=0  id=PrimaryPhoneType><option value=X>Select<option value = 'H' selected>Home<option value = 'C'>Cell<option value = 'W'>Work</select></td>
+							<td align=right> Cell Phone </td>
+							<td align=left> 
+								<input type="text" name =PatCellNo value='' size=12 maxlength=12 id=PatCellNo onChange='return isValidNANP(this)' >&nbsp;&nbsp;&nbsp;
+								<select name=SecondaryPhoneType size=0  id=SecondaryPhoneType><option value=X>Select<option value = 'H'>Home<option value = 'C' selected>Cell<option value = 'W'>Work</select> </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Alternate Phone </td>
+							<td align=left> 
+								<input type="text" name =PatWorkNo value='' size=12 maxlength=12 id=PatWorkNo onChange='return isValidNANP(this)' > &nbsp;&nbsp;&nbsp;
+								<select name=AlternatePhoneType size=0  id=AlternatePhoneType ><option value=X>Select<option value = 'H'>Home<option value = 'C'>Cell<option value = 'W'>Work</select> </td>
+							<td align=right> Pager </td>
+							<td align=left> <input type="text" name =PatPagerNo value='' size=12 maxlength=12 id=PatPagerNo onChange='return isValidNANP(this)' > </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> EMail </td>
+							<td align=left ><input type="text" name =PatEMail value='' size=48 maxlength=64 id=PatEMail > </td>
+							<td align=right> Best Time To Call </td>
+							<td align=left ><input type="text" name =BestTimeToCall value='' size=16 maxlength=64 id=BestTimeToCall > </td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs_2" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right nowrap> Address 1</td>
+							<td align=left colspan=3> <input type="text" name =PatAddress1 value="1S376 SUMMIT AVE." size=30 maxlength=30 id=PatAddress1 onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Address 2 </td>
+							<td align=left colspan=3> <input type="text" name =PatAddress2 value="" size=30 maxlength=30 id=PatAddress2 onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> City</td>
+							<td align=left> <input type="text" name =PatCity value="OAKBROOK" size=20 maxlength=20 id=PatCity onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> </td>
+							<td align=right> State </td>
+							<td align=left> <input type="text" name =PatState value="IL" size=2 maxlength=2 id=PatState onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'>
+								&nbsp; Zip
+								<input type="text" name =PatZip value='60181' size=10 maxlength=10 id=PatZip onChange='return isValidZipCode(this)' > </td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs_3" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right> Patient Relationship to Subscriber </td>
+							<td align=left> <select name=SubscriberRelation size=0  id=SubscriberRelation onChange="return setSubscriberName('P')"><option value=-1> Select<option value = '01'>Self<option value = '02'>Spouse<option value = '03'>Child<option value = '04'>Step Child<option value = '05'>Parent<option value = '99'>Other</select> </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Last Name </td>
+							<td align=left> <input type="text" name =SubscriberLastName value='' size=20 maxlength=20 id=SubscriberLastName onkeypress='return makeUppercase()' >  </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> FirstName </td>
+							<td align=left> <input type="text" name =SubscriberFirstName value='' size=20 maxlength=20 id=SubscriberFirstName onkeypress='return makeUppercase()' >  &nbsp;&nbsp;&nbsp;
+							MI &nbsp;&nbsp;<input type="text" name =SubscriberMiddleInit value='' size=1 maxlength=1 id=SubscriberMiddleInit onkeypress='return makeUppercase()' >
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs_4" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right> Name </td>
+							<td align=left colspan=3>
+							<select name=insNameList size=0  onchange="setInsNameFromList(this, 'InsName');"><option value=-1>Select<option value = 'AARP'>AARP<option value = 'AETNA'>AETNA<option value = 'ANTHEM DIRECT'>ANTHEM DIRECT<option value = 'BLUE CROSS BLUE SHIELD - IL'>BLUE CROSS BLUE SHIELD - IL<option value = 'CIGNA'>CIGNA<option value = 'CORESOURCE - MD, PA, IL'>CORESOURCE - MD, PA, IL<option value = 'COVENTRY HEALTHCARE'>COVENTRY HEALTHCARE<option value = 'GREAT-WEST HEALTHCARE'>GREAT-WEST HEALTHCARE<option value = 'HUMANA'>HUMANA<option value = 'HUMANA HMO'>HUMANA HMO<option value = 'ILLINOIS MEDICAID'>ILLINOIS MEDICAID<option value = 'MEDICARE'>MEDICARE<option value = 'TRICARE'>TRICARE<option value = 'UNITED HEALTHCARE'>UNITED HEALTHCARE<option value = 'SELF PAY'>SELF PAY<option value = 'WORKER COMP'>WORKER COMP<option value = 'OTHER'>OTHER</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name =InsName value='' size=48 maxlength=64 id=InsName onKeyPress='return makeUppercase()' class=readonly >
+							</td>
+							<td align=right> Referral </td>
+							<td> <input type="text" name =PInsReferral value='' size=20 maxlength=32 id=PInsReferral onkeypress='return makeUppercase()' > </td>
+							<td> &nbsp; </td>
+							<td>
+									<input type=checkbox  id=isAuto onclick='setAutoTab()'  name='isAuto'>Auto<input type=checkbox  id=isWorkMan onclick='setWorkmanTab()'  name='isWorkman'>Work<input type=checkbox  id=isHMO  name='isHMO'>HMO
+							</td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Address1 </td>
+							<td> <input type="text" name =PInsAddress1 value='' size=20 maxlength=30 id=PInsAddress1 onkeypress='return makeUppercase()' > </td>
+							<td align=right> Address2 </td>
+							<td> <input type="text" name =PInsAddress2 value='' size=20 maxlength=30 id=PInsAddress2 onkeypress='return makeUppercase()' >
+							<td align=right> City </td>
+							<td> <input type="text" name =PInsCity value='' size=20 maxlength=20 id=PInsCity onkeypress='return makeUppercase()' >
+							<td align=right> State </td>
+							<td> <input type="text" name =PInsState value='' size=2 maxlength=2 id=PInsState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip 
+								<input type="text" name =PInsZip value='' size=10 maxlength=10 id=PInsZip onChange='isValidZipCode(this)' >
+							</td>
+						</tr>
+						<tr class=tabTD>
+							<td  align=right> Ins ID </td>
+							<td align=left> <input type="text" name =InsId value='' size=20 maxlength=20 id=InsId onkeypress='return makeUppercase()' >  </td>
+							<td  align=right> Ins Group </td>
+							<td align=left> <input type="text" name =InsGroupName value='' size=20 maxlength=20 id=InsGroupName onkeypress='return makeUppercase()' >  </td>
+							<td align=right> Phone </td>
+							<td  align=left > <input type="text" name =InsPhone value='' size=12 maxlength=12 id=InsPhone onChange='return isValidNANP(this)' >  </td>
+							<td  align=right> Auth # </td>
+							<td align=left> <input type="text" name =PInsAuth value='' size=20 maxlength=32 id=PInsAuth onkeypress='return makeUppercase()' >  </td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs_5" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right> Patient Relationship to Subscriber </td>
+							<td align=left> <select name=SecSubscriberRelation size=0  id=SecSubscriberRelation onChange="return setSubscriberName('S')"><option value=-1> Select<option value = '01'>Self<option value = '02'>Spouse<option value = '03'>Child<option value = '04'>Step Child<option value = '05'>Parent<option value = '99'>Other</select> </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Last Name </td>
+							<td align=left> <input type="text" name =SecSubscriberLastName value='' size=20 maxlength=20 id=SecSubscriberLastName onkeypress='return makeUppercase()' >  </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> FirstName </td>
+							<td align=left> <input type="text" name =SecSubscriberFirstName value='' size=20 maxlength=20 id=SecSubscriberFirstName onkeypress='return makeUppercase()' >  &nbsp;&nbsp;&nbsp;
+							MI &nbsp;&nbsp;<input type="text" name =SecSubscriberMiddleInit value='' size=1 maxlength=1 id=SecSubscriberMiddleInit onkeypress='return makeUppercase()' >
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs_6" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right> Name </td>
+							<td align=left colspan=3>
+							<select name=secInsNameList size=0  onchange="setInsNameFromList(this, 'SecInsName');"><option value=-1>Select<option value = 'AARP'>AARP<option value = 'AETNA'>AETNA<option value = 'ANTHEM DIRECT'>ANTHEM DIRECT<option value = 'BLUE CROSS BLUE SHIELD - IL'>BLUE CROSS BLUE SHIELD - IL<option value = 'CIGNA'>CIGNA<option value = 'CORESOURCE - MD, PA, IL'>CORESOURCE - MD, PA, IL<option value = 'COVENTRY HEALTHCARE'>COVENTRY HEALTHCARE<option value = 'GREAT-WEST HEALTHCARE'>GREAT-WEST HEALTHCARE<option value = 'HUMANA'>HUMANA<option value = 'HUMANA HMO'>HUMANA HMO<option value = 'ILLINOIS MEDICAID'>ILLINOIS MEDICAID<option value = 'MEDICARE'>MEDICARE<option value = 'TRICARE'>TRICARE<option value = 'UNITED HEALTHCARE'>UNITED HEALTHCARE<option value = 'SELF PAY'>SELF PAY<option value = 'WORKER COMP'>WORKER COMP<option value = 'OTHER'>OTHER</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name =SecInsName value='' size=48 maxlength=64 id=SecInsName onKeyPress='return makeUppercase()' class=readonly >
+							<td align=right> Referral </td>
+							<td> <input type="text" name =SInsReferral value='' size=20 maxlength=32 id=SInsReferral onkeypress='return makeUppercase()' > </td>
+							<td colspan=2> &nbsp; </td>
+							</td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Address1 </td>
+							<td> <input type="text" name =SInsAddress1 value='' size=20 maxlength=30 id=SInsAddress1 onkeypress='return makeUppercase()' > </td>
+							<td align=right> Address2 </td>
+							<td> <input type="text" name =SInsAddress2 value='' size=20 maxlength=30 id=SInsAddress2 onkeypress='return makeUppercase()' >
+							<td align=right> City </td>
+							<td> <input type="text" name =SInsCity value='' size=20 maxlength=20 id=SInsCity onkeypress='return makeUppercase()' >
+							<td align=right> State </td>
+							<td> <input type="text" name =SInsState value='' size=2 maxlength=2 id=SInsState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip 
+								<input type="text" name =SInsZip value='' size=10 maxlength=10 id=SInsZip onChange='isValidZipCode(this)' >
+							</td>
+						</tr>
+						<tr class=tabTD>
+							<td  align=right> Ins ID </td>
+							<td align=left> <input type="text" name =SecInsId value='' size=20 maxlength=20 id=SecInsId onkeypress='return makeUppercase()' >  </td>
+							<td  align=right> Ins Group </td>
+							<td align=left> <input type="text" name =SecInsGroupName value='' size=20 maxlength=20 id=SecInsGroupName onkeypress='return makeUppercase()' >  </td>
+							<td align=right> Phone </td>
+							<td  align=left > <input type="text" name =SecInsPhone value='' size=12 maxlength=12 id=v onChange='return isValidNANP(this)' >  </td>
+							<td  align=right> Auth # </td>
+							<td align=left> <input type="text" name =SInsAuth value='' size=20 maxlength=32 id=SInsAuth onkeypress='return makeUppercase()' >  </td>
+						</tr>
+					</table>
+				</div>
+				<div id="tabs_7" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td align=right> Case Number </td>
+							<td align=left ><input type="text" name =WorkManCaseNo value='' size=20 maxlength=30 id=WorkManCaseNo onkeypress='return makeUppercase()' > </td>
+							<td align=right> Adjuster Last Name </td>
+							<td align=left> <input type="text" name =AdjusterLastName value='' size=20 maxlength=20 id=AdjusterLastName onkeypress='return makeUppercase()' >  </td>
+							<td align=right> Adjuster First Name </td>
+							<td align=left> <input type="text" name =AdjusterFirstName value='' size=20 maxlength=20 id=AdjusterFirstName onkeypress='return makeUppercase()' > </td>
+							<td align=right> MI 
+							<td align=left> <input type="text" name =AdjusterMiddleInit value='' size=1 maxlength=1 id=AdjusterMiddleInit onkeypress='return makeUppercase()' > </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Address1 </td>
+							<td> <input type="text" name =WCAddress1 value='' size=20 maxlength=30 id=WCAddress1 onkeypress='return makeUppercase()' > </td>
+							<td align=right> Address2 </td>
+							<td> <input type="text" name =WCAddress2 value='' size=20 maxlength=30 id=WCAddress2 onkeypress='return makeUppercase()' >
+							<td align=right> City </td>
+							<td> <input type="text" name =WCCity value='' size=20 maxlength=20 id=WCCity onkeypress='return makeUppercase()' >
+							<td align=right> State </td>
+							<td> <input type="text" name =WCState value='' size=2 maxlength=2 id=WCState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip 
+								<input type="text" name =WCZip value='' size=10 maxlength=10 id=WCZip onChange='isValidZipCode(this)' >
+							</td>
+						</tr>
+						<tr class=tabTD>
+							<td  align=right> Adjuster Phone </td>
+							<td align=left> <input type="text" name =AdjusterPhone value='' size=12 maxlength=12 id=AdjusterPhone onChange='return isValidNANP(this)' >  </td>
+							<td  align=right> Date Of Injury </td>
+							<td align=left> <input type="text" name =DateOfInjury value='' size=12 maxlength=12 id=DateOfInjury onChange='return isValidDate(this)' >  </td>
+							<td colspan=4> &nbsp; </td>
+						</tr>
+					</table>			
+				</div>
+				<div id="tabs_8" style="padding: 0px 0px 0px 0px;">
+					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
+						<tr class=tabTD>
+							<td  align=right> Auto Case No </td>
+							<td align=left> <input type="text" name =AutoCaseNo value='' size=20 maxlength=32 id=AutoCaseNo onkeypress='return makeUppercase()' >  </td>
+							<td  align=right> Attorney Last Name </td>
+							<td align=left> <input type="text" name =AttorneyLastName value='' size=20 maxlength=20 id=AttorneyLastName onkeypress='return makeUppercase()' >  </td>
+							<td align=right> Attorney First Name </td>
+							<td  align=left > <input type="text" name =AttorneyFirstName value='' size=20 maxlength=20 id=AttorneyFirstName onkeypress='return makeUppercase()' >  </td>
+							<td  align=right> MI </td>
+							<td align=left> <input type="text" name =AttorneyMiddleInit value='' size=1 maxlength=1 id=AttorneyMiddleInit onkeypress='return makeUppercase()' >  </td>
+						</tr>
+						<tr class=tabTD>
+							<td align=right> Address1 </td>
+							<td> <input type="text" name =AutoAddress1 value='' size=20 maxlength=30 id=AutoAddress1 onkeypress='return makeUppercase()' > </td>
+							<td align=right> Address2 </td>
+							<td> <input type="text" name =AutoAddress2 value='' size=20 maxlength=30 id=AutoAddress2 onkeypress='return makeUppercase()' >
+							<td align=right> City </td>
+							<td> <input type="text" name =AutoCity value='' size=20 maxlength=20 id=AutoCity onkeypress='return makeUppercase()' >
+							<td align=right> State </td>
+							<td> <input type="text" name =AutoState value='' size=2 maxlength=2 id=AutoState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip 
+								<input type="text" name =AutoZip value='' size=10 maxlength=10 id=AutoZip onChange='isValidZipCode(this)' >
+							</td>
+						</tr>
+						<tr class=tabTD>
+							<td  align=right> Attorney Phone </td>
+							<td align=left> <input type="text" name =AttorneyPhone value='' size=12 maxlength=12 id=AttorneyPhone onChange='return isValidNANP(this)' >  </td>
+							<td  align=right> Date Of Injury </td>
+							<td align=left> <input type="text" name =AutoDateOfInjury value='' size=12 maxlength=12 id=AutoDateOfInjury onChange='return isValidDate(this)' >  </td>
+							<td colspan=4> &nbsp; </td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+<br/>
+
+<div id=divPage1 class="clsDivPage">
+	<table width=100% border=0 cellpadding=1 cellspacing=1 class=border>
+		<tr>
+			<td align=right> Surgery Date/Time  </td>
+			<td>
+				<input type=text class='upperinput' name =SurgeryDate value="" size=12 maxlength=12 id='SurgeryDate' onChange=setDateChangeFlag(this) ;> <b> * </b><select name=SurgeryTimeHour size=0  ><option value = '-1'>HH<option value = '00'>00<option value = '06'>6 am<option value = '07'>7 am<option value = '08'>8 am<option value = '09'>9 am<option value = '10'>10 am<option value = '11'>11 am<option value = '12'>12 pm<option value = '13'>1 pm<option value = '14'>2 pm<option value = '15'>3 pm<option value = '16'>4 pm<option value = '17'>5 pm<option value = '18'>6 pm<option value = '19'>7 pm<option value = '20'>8 pm</select>-<select name=SurgeryTimeMinute size=0  ><option value = '-1'>MM<option value = '00'>00<option value = '15'>15<option value = '30'>30<option value = '45'>45</select>
+				<br/> <input type=checkbox   name='NoMoveUp' onclick="toggeleNote (this, 'NoMoveUp_Note');">No Move Up&nbsp;&nbsp;<input  disabled  type=text name='NoMoveUp_Note' maxlength=64 size=32 value=''onkeypress='return makeUppercase()'><small></small>
+			</td>
+			<td  align=right>Physician responsible for H&P </td>
+			<td> <select name=HPResponsibility size=0  ><option value = '1'>Surgeon<option value = '2'>Attending</select> </td>
+			
+					<td align=right> From Office </td>
+					<td>
+						<select name=Offices size=0   ><option value=-1>Select </option><option value = '1'>SURGICAL CONSULTANTS<option value = '2'>ALPINE PHY<option value = '3'>CRYSTAL<option value = '4'>REGENCY MEDICAL CENTER<option value = '5'>WOODSTOCK HEART CENTER<option value = '6'>WESTLAKE CLINIC<option value = '7'>CONDELL CLINIC<option value = '8'>PALATINE HEART CENTER, S.C.<option value = '9'>ALPINE FAMILY PHYSICIANS<option value = '10'>CRYSTAL LAKE HEART CENTER<option value = '12'>MCHENRY OFFICE<option value = '13'>LAKE ZURICH -SEGAL<option value = '14'>PROVENA SAINT JOSEPH HOSPITAL<option value = '47'>NEW SAFARI OFFICE<option value = '51'>CHROMEZ<option value = '52'>INTERNET 11CV<option value = '53'>NO CMP VIEW<option value = '56'>NEW OFFICE</select>
+					</td>
+			
+		</tr>
+		<tr>
+			<td align=right> Surgeon Name </td>
+			<td >
+				<select name=SurgeonID size=0   onchange='setAttendingPhysician()'><option value=-1>Select </option><option value = '10'>Dr. BRATIS, CHRISTINA  <option value = '5'>Dr. DILLON, BRUCE  <option value = '47'>Dr. GOKHALE, RAHUL  <option value = '8'>Dr. JEJURIKAR, SANDEEP  <option value = '2'>Dr. KADAKIA, SUNIL N<option value = '4'>Dr. KARAHALIOUS, DEAN  <option value = '1'>Dr. LOUIS, STEVEN  <option value = '3'>Dr. ROSEN, JEFFREY  <option value = '9'>Dr. THANGAMANI, VIJAY  </select>
+			</td>
+			<td align=right> Assisting Surgeon </td>
+			<td>
+				<input type=hidden id=AssistSurgeonID name=AssistSurgeonID value="0">
+				<input type=text id="AssistSurgeonName" style="width:150"  name="AssistSurgeonName" style="width:100" onkeypress="getPhysicianHelp(this, 'ListAssistSurgeon');"  value="">
+				<img1 src="../../common/images/expand.gif" onclick1="addNewSurgeryPhy('AssistSurgeonID','AssistSurgeonName');"><br/>
+				<select class="ListPhyName"  name="ListAssistSurgeon" id="ListAssistSurgeon" size="6" onchange="selectPhysician(this, 'AssistSurgeonID', 'AssistSurgeonName')"></select>
+			</td>
+			<td align=right> Attending Physician </td>
+			<td>
+				<input type=hidden id=AttendingSurgeonID name=AttendingSurgeonID value="0">
+				<input type=text id="AttendingSurgeonName" style="width:150"  name="AttendingSurgeonName" style="width:100" onkeypress="getPhysicianHelp(this, 'ListAttendingSurgeon');" value="" > *
+				<img1 src="../../common/images/expand.gif" onclick1="addNewSurgeryPhy('AttendingSurgeonID','AttendingSurgeonName');"><br/>
+				<select class="ListPhyName" name="ListAttendingSurgeon" id="ListAttendingSurgeon" size="6" onchange="selectPhysician(this, 'AttendingSurgeonID', 'AttendingSurgeonName')"></select>
+				<input type=checkbox  name='FlgAttendingForProc'>Attending for procedure
+				</td>
+		</tr>
+		<tr>
+
+			<td align=right> C-Arm </td>
+			<td> <select name=CArms size=0  ><option value = 'N' selected>No<option value = 'Y'>Yes</select>
+			</td>
+			<td align=right rowspan=3> Type of Anesthesia </td>
+			<td rowspan=3 colspan=3>
+				<table width=98% border=0>
+					<tr>
+						<td> <input type=checkbox  name='ANST_General'>General </td>
+						<td> <input type=checkbox  name='ANST_MAC'>MAC </td>
+					</tr>
+					<tr>
+						<td> <input type=checkbox  name='ANST_Local'>Local </td>
+						<td>
+							<input type=checkbox  name='ANST_ReginalBlock'>Regional Block &nbsp;&nbsp;
+							<select name=ANST_ReginalBlockType size=0  ><option value = 'N'>Not Applicable<option value = 'A'>Axillary<option value = 'P'>Popliteal<option value = 'S'>Scalene<option value = 'F'>Femoral<option value = 'B'>Bier<option value = 'C'>Sciatic</select>
+						</td>
+					</tr>
+					<tr>
+						<td> <input type=checkbox  name='ANST_Epidural'>Epidural </td>
+						<td> <input type=checkbox  name='ANST_Sedation'>Conscious Sedation </td>
+					</tr>
+					<tr>
+						<td> <input type=checkbox  name='ANST_Spinal'>Spinal </td>
+						<td>
+							<input type=checkbox   name='ANST_Other' onclick="toggeleNote (this, 'ANST_Other_Note');">Other &nbsp;&nbsp;
+							<input  disabled  type=text name='ANST_Other_Note' maxlength=10 size=10 value=''onkeypress='return makeUppercase()'><small></small>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align=right> X-Ray Tech </td>
+			<td > <select name=XRayTech size=0  ><option value = 'N' selected>No<option value = 'Y'>Yes</select>
+		</tr>
+		<tr>
+			<td align=right> Surgical Assistant </td>
+			<td > <select name=SurgicalAssistant size=0  ><option value = 'N'>No<option value = '1'>1<option value = '2'>2<option value = '3'>3</select>
+		</tr>
+		<tr>
+			<td align=right>Representative Needed</td>
+			<td> <select name=RepresentativeNeeded size=0  ><option value=X> Select<option value = '1'>Arthrex<option value = '2'>Biomet<option value = '3'>Exactech<option value = '4'>Smith & Nephew<option value = '5'>Stryker<option value = '6'>Zimmer</select> </td>
+			<td nowrap> <input type=checkbox  name='RepresentativeNotified'>Representative Notified&nbsp;&nbsp;&nbsp; </td>
+			<td align=right> Minutes needed for procedure </td>
+			<td colspan=2>
+				<input type=text class='upperinput' name =MinutesForProc value="" size=3 maxlength=3 onKeyPress="return allowInteger(true, false)" onchange="validateMinForProc(this)"> <b> * </b>
+			</td>
+		</tr>
+		<tr>
+			<td align=right  rowspan=4> Blood  </td>
+			<td  rowspan=4 colspan=2>
+				<table width=100% border=0>
+					<tr>
+						<!-- Desc and name do not match, as customization was done -->
+						<input type=hidden name=BD_Screen value="">
+						<td align=left><input type=checkbox   name='BD_Cross' onclick="toggeleNote (this, 'BD_Cross_Note');">Type/Screen PRBC</td><td align=left><input  disabled  type=text name='BD_Cross_Note' maxlength=1 size=1 value=''onkeypress='return makeUppercase()'><small>Units</small></td>
+					</tr>
+					<tr> <td align=left><input type=checkbox   name='BD_Autologous' onclick="toggeleNote (this, 'BD_Autologous_Note');">Autologous</td><td align=left><input  disabled  type=text name='BD_Autologous_Note' maxlength=1 size=1 value=''onkeypress='return makeUppercase()'><small>Units</small></td> </tr>
+					<tr> <td align=left><input type=checkbox   name='BD_Donor' onclick="toggeleNote (this, 'BD_Donor_Note');">Designated Donor </td><td align=left><input  disabled  type=text name='BD_Donor_Note' maxlength=1 size=1 value=''onkeypress='return makeUppercase()'><small>Units</small></td> </tr>
+					<tr> <td align=left><input type=checkbox   name='BD_Platelet' onclick="toggeleNote (this, 'BD_Platelet_Note');">Platelet</td><td align=left><input  disabled  type=text name='BD_Platelet_Note' maxlength=1 size=1 value=''onkeypress='return makeUppercase()'><small>Packs</small></td> </tr>
+					<tr> <td align=left><input type=checkbox  name='BD_CellSaver'>Cell Saver</td><td align=left>&nbsp;</td> </tr>
+					<tr> <td align=left><input type=checkbox  name='BD_Ortho_Pat'>Ortho Pat</td><td align=left>&nbsp;</td> </tr>
+					<tr> <td colspan=2> <b>OB Offices: <input type=checkbox  name='OBOffices'>Type/RH for missed abortion</b> </td> </tr>
+				</table>
+			</td>
+			<td align=right>Special Equipment Needed </td>
+			<td colspan=2> <input type="text" name =SpecialEquipment value='' size=80 maxlength=128 onkeypress='return makeUppercase()' > 	</td>
+		</tr>
+		<tr>
+			<td align=right> Latex Allergy </td>
+			<td colspan=2 align=left> <select name=LatexAllergy size=0  ><option value=X> Select<option value = 'Y'>Yes<option value = 'N'>No<option value = 'U'>Unknown</select></td>
+		</tr>	
+		<tr>
+			<td align=right>Allergies </td>
+			<td colspan=2> <input type=text class='upperinput' name =Allergies value="" size=80 maxlength=128 onkeypress='return makeUppercase()' onchange='validateAllergies()'> <b> * </b> </td>
+		</tr>
+		<tr>
+			<td align=right>Additional Physician Orders </td>
+			<td colspan=2> <textarea name =AdditionalOrders rows=3 cols=48 onkeypress="makeUppercase();validateTextArea(this, '511')"></textarea> </td>
+		</tr>
+		<tr>
+			<td colspan=4>
+				<b>Antibiotics </b> <br>
+				<input type=radio name=AntibioticType value=1 onclick=setAntibiotic()>Elective Adult Pre-Operative Surgical Antibiotic Prophylaxis Guidelines to be administered <br/>
+				<input type=radio name=AntibioticType value=2 onclick=setAntibiotic()>Due to cephalosporin/penicillin allergy use alternative elective antibiotic per guidelines  <br/>
+				<input type=radio name=AntibioticType value=3 onclick=setAntibiotic()>No antibiotic prophylaxis <br/>
+				<input type=radio name=AntibioticType value=4 onclick=setAntibiotic()>Alternative antibiotic prophylaxis
+				<select name=AntibioticType_Note size=0  ><option value=X>Select </option><option value = 'M'>Cefazolin 1 gm IV <option value = 'K'>Cefazolin 1 gm IV (physician aware of PCN allergy)<option value = 'N'>Cefazolin 2 gm IV <option value = 'I'>Cefazolin 2 gm IV (physician aware of PCN allergy)<option value = 'O'>Cefoxitin 1 gm IV <option value = 'L'>Cefoxitin 1 gm IV (physician aware of PCN allergy)<option value = 'P'>Cefoxitin 2 gm IV<option value = 'J'>Cefoxitin 2 gm IV (physician aware of PCN allergy)<option value = 'D'>Ciprofloxacin 400 mg IV and Clindamycin 900 mg IV<option value = 'E'>Ciprofloxacin 400 mg IV and Metronidazole 500 mg IV<option value = 'C'>Clindamycin 900 mg IV<option value = 'H'>Erythromycin 500 mg IV<option value = 'F'>Gentamicin 1.5 mg/kg IV and Clindamycin 900 mg IV<option value = 'G'>Gentamicin 1.5 mg/kg IV and Vancomycin 1 gm IV<option value = 'A'>Vancomycin 1 gm IV (if patient weight <= 70 kg)<option value = 'B'>Vancomycin 2 gm IV (if patient weight > 70 kg)</select> <br/>
+				<input type=radio name=AntibioticType value=5 onclick=setAntibiotic()>Other: Specify drug/dose/route/time
+				<input type="text" name =AntibioticType_Note1 value='' size=64 maxlength=128 onkeypress='return makeUppercase()' >
+			</td>
+			<td colspan=2> &nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td valign=top> Customized Physician Order(s) </td>
+			<td valign=top>
+				<input name=SurgeryDocs id=Doc_1 type=checkbox disabled value='1'  > <a href=# onclick="javascript:showEquipmentDoc('Doc_1', '1','DillonEF-Entereg', 'N')"> DillonEF-Entereg</a> <br/><input name=SurgeryDocs id=Doc_2 type=checkbox disabled value='2'  > <a href=# onclick="javascript:showEquipmentDoc('Doc_2', '2','Eye Care', 'N')"> Eye Care</a> <br/>
+			</td>
+			<td valign=top> Patient Type <br/> <br/><select name=PatientType size=0  onchange='toggleAdmitForm();setCMSFlag()'><option value=X>Select </option><option value = '1'>OP<option value = '2'>Ambulatory<option value = '3'>AM Admit<option value = '4'>InHouse</select> </td>
+			<td colspan=3>
+				<table width=100% border=0>
+					<tr>
+						<td align=right>Isolation Precautions / <br/> Special Needs </td>
+						<td colspan=2>
+							<select name="SpecialNeeds" size=5 multiple="true" style="height:60px;">
+							<option value=0>None<option value=1>MRSA<option value=2>VRE<option value=3>C-Diff<option value=4>Other Isolation<option value=5>Neutropenic<option value=6>Negative Pressure<option value=7>Positive Pressure<option value=8>Latex Sensitivity<option value=9>Hemodialysis<option value=A>Peritoneal Dialysis<option value=B>Private Room<option value=C>Close to Nurse Station<option value=D>Suicide Precautions
+							</select>
+							<div style="display:none"> <textarea name =OtherRemarks rows=3 cols=31 onkeypress="makeUppercase();validateTextArea(this, '127')"></textarea> </div>
+						</td>
+					</tr>
+				</table>
+				<div id="divAdmitForm" style="width:100%" >
+				<table width=100%>
+					<tr>
+						<input type=hidden name=FlgLevelofCare value="I">
+						<td align=right> Admitting physician  </td>
+						<td>
+						<input type=hidden id=AdmittingPhyID name=AdmittingPhyID value="0">
+						<input type=text id="AdmittingPhyName" style="width:150"  name="AdmittingPhyName" style="width:100" onkeypress="getPhysicianHelp(this, 'ListAdmittingPhy');"  value="">
+						<img1 src="../../common/images/expand.gif" onclick1="addNewSurgeryPhy('AdmittingPhyID','AdmittingPhyName');"><br/>
+						<select class="ListPhyName"  name="ListAdmittingPhy" id="ListAdmittingPhy" size="6" onchange="selectPhysician(this, 'AdmittingPhyID', 'AdmittingPhyName')"></select>
+						</td>
+						<td align=right> Bed Type </td>
+						<td><select name=FlgBedType size=0  ><option value=0>Select Bed Type</option><option value = '1'>Cardiac Neuro PCU<option value = '2'>Critical Care<option value = '3'>Medical Surgical Pulmonary PCU<option value = '4'>Medical Surgical<option value = '5'>Medical Telemetry<option value = '6'>Women & Children<option value = '7'>Pediatrics<option value = '8'>Psychiatry</select> </td>
+					</tr>
+				</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=3> <input type=checkbox checked disabled=true> Initiate Preoperative Testing Protocol. </td>
+			<td rowspan=3> Comments � (e.g. Extended Care Facility, Interpreter etc.)
+			<td colspan=2 rowspan=3><textarea name=PhyComments rows=3 cols=48 onkeypress="validateTextArea(this, 510);makeUppercase() " ></textarea>
+		</tr>
+		<tr>
+			<td colspan=3> <input type=checkbox checked disabled=true> Initiate Surgical Care Pavilion: Pre-Surgical Protocol. </td>
+		</tr>
+		<tr>
+			<td colspan=3> 
+			<input type=checkbox disabled name=chkMRSA   >Initiate nasal swabs for MRSA and MSSA.
+			</td>
+		</tr>
+	</table>
+	
+	<table height=10% width=100%>
+		<tr>
+			<td align=center>
+				<input class=longButton type=button name=Next value='Save As Draft' onclick='showPage2WithDraftMode()'> &nbsp;&nbsp;&nbsp;
+					<input class=longButton type=button name=Next value=Next onclick="showPage2()"> &nbsp;&nbsp;&nbsp;
+				
+				<input class=longButton type=button name=Cancel value=Cancel onclick="self.close()">
+			</td>
+		</tr>
+	</table>
+
+
+</div>
+
+<div id=divPage2 class="clsDivPage" style="display:none">
+	<table border=0 width=100% cellspacing=1 cellpadding=1 class=border>
+		<tr>
+			<td align=right width=5%> ICD </td>
+			<td colspan=5>
+				<div id=divICDList class=clsICDList>
+					<table width="98%">
+						<tr><td width=100%>
+						<table border=1 width=100% cellspacing=0 cellpadding=0>
+						
+								<tr>
+								<td width=40%>
+									1 &nbsp;
+									<input id=icd1 type=text size=8 name=icd value="" onchange="validateICD(this,'icd1','ICDDesc1')">*&nbsp;&nbsp;
+									<input type=hidden name=ICDDesc value="" id="ICDDesc1">
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','ICD', 'icd1', 'SpanICDDesc1')">
+									<span id=SpanICDDesc1 class=ICDHelpSpan></span>
+								</td>
+								<td>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('ICD', 'ICDNote1', 'spanICDNote1', 'SpanICDDesc1');">*
+									<input type=hidden name=ICDNote id="ICDNote1" value="">
+									<span id="spanICDNote1">
+									<font class=clsDummyText>Click on icon to write diagnosis description ... </font>
+									</span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									2 &nbsp;
+									<input id=icd2 type=text size=8 name=icd value="" onchange="validateICD(this,'icd2','ICDDesc2')">&nbsp;&nbsp;
+									<input type=hidden name=ICDDesc value="" id="ICDDesc2">
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','ICD', 'icd2', 'SpanICDDesc2')">
+									<span id=SpanICDDesc2 class=ICDHelpSpan></span>
+								</td>
+								<td>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('ICD', 'ICDNote2', 'spanICDNote2', 'SpanICDDesc2');">
+									<input type=hidden name=ICDNote id="ICDNote2" value="">
+									<span id="spanICDNote2">
+									<font class=clsDummyText>Click on icon to write diagnosis description ... </font>
+									</span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									3 &nbsp;
+									<input id=icd3 type=text size=8 name=icd value="" onchange="validateICD(this,'icd3','ICDDesc3')">&nbsp;&nbsp;
+									<input type=hidden name=ICDDesc value="" id="ICDDesc3">
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','ICD', 'icd3', 'SpanICDDesc3')">
+									<span id=SpanICDDesc3 class=ICDHelpSpan></span>
+								</td>
+								<td>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('ICD', 'ICDNote3', 'spanICDNote3', 'SpanICDDesc3');">
+									<input type=hidden name=ICDNote id="ICDNote3" value="">
+									<span id="spanICDNote3">
+									<font class=clsDummyText>Click on icon to write diagnosis description ... </font>
+									</span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									4 &nbsp;
+									<input id=icd4 type=text size=8 name=icd value="" onchange="validateICD(this,'icd4','ICDDesc4')">&nbsp;&nbsp;
+									<input type=hidden name=ICDDesc value="" id="ICDDesc4">
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','ICD', 'icd4', 'SpanICDDesc4')">
+									<span id=SpanICDDesc4 class=ICDHelpSpan></span>
+								</td>
+								<td>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('ICD', 'ICDNote4', 'spanICDNote4', 'SpanICDDesc4');">
+									<input type=hidden name=ICDNote id="ICDNote4" value="">
+									<span id="spanICDNote4">
+									<font class=clsDummyText>Click on icon to write diagnosis description ... </font>
+									</span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									5 &nbsp;
+									<input id=icd5 type=text size=8 name=icd value="" onchange="validateICD(this,'icd5','ICDDesc5')">&nbsp;&nbsp;
+									<input type=hidden name=ICDDesc value="" id="ICDDesc5">
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','ICD', 'icd5', 'SpanICDDesc5')">
+									<span id=SpanICDDesc5 class=ICDHelpSpan></span>
+								</td>
+								<td>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('ICD', 'ICDNote5', 'spanICDNote5', 'SpanICDDesc5');">
+									<input type=hidden name=ICDNote id="ICDNote5" value="">
+									<span id="spanICDNote5">
+									<font class=clsDummyText>Click on icon to write diagnosis description ... </font>
+									</span>
+								</td>
+								</tr>
+						
+						</table>
+						</td>
+						
+							<td valign=top><br/><input class=longButton type=button value="Check Rules" style="visibility:hidden"> </td> </tr>
+						
+						</tr>
+				</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td align=right> CPT </td>
+			<td colspan=5>
+				<div id=divCPTList class=clsCPTList>
+				<table width="98%">
+						<tr> <td width=100%>
+						<table border=1 width=100% cellspacing=0 cellpadding=0>
+						
+								<tr>
+								<td width=40%>
+									1 &nbsp;
+									<input  id=cpt1 type=text size=8 name=s_cpt value="" onchange="validateCPT('1', this,'cpt1','CPTDesc1', 'Laterality1')">*&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt1', 'SpanCPTDesc1')">
+									<input type=hidden id="dummyChargeCode1" name="dummyChargeCode" value="SR111101">
+									<input type=hidden id="CPTDesc1" name=CPTDesc value="">
+									<span id=SpanCPTDesc1 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB1 value="N">
+									<select name=Laterality size=0   id=Laterality1 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote1', 'spanCPTNote1', 'SpanCPTDesc1');">*
+									<input type=hidden name=CPTNote id="CPTNote1" value="">
+									<span id="spanCPTNote1"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									2 &nbsp;
+									<input  id=cpt2 type=text size=8 name=s_cpt value="" onchange="validateCPT('2', this,'cpt2','CPTDesc2', 'Laterality2')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt2', 'SpanCPTDesc2')">
+									<input type=hidden id="dummyChargeCode2" name="dummyChargeCode" value="SR111102">
+									<input type=hidden id="CPTDesc2" name=CPTDesc value="">
+									<span id=SpanCPTDesc2 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB2 value="N">
+									<select name=Laterality size=0   id=Laterality2 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote2', 'spanCPTNote2', 'SpanCPTDesc2');">
+									<input type=hidden name=CPTNote id="CPTNote2" value="">
+									<span id="spanCPTNote2"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									3 &nbsp;
+									<input  id=cpt3 type=text size=8 name=s_cpt value="" onchange="validateCPT('3', this,'cpt3','CPTDesc3', 'Laterality3')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt3', 'SpanCPTDesc3')">
+									<input type=hidden id="dummyChargeCode3" name="dummyChargeCode" value="SR111103">
+									<input type=hidden id="CPTDesc3" name=CPTDesc value="">
+									<span id=SpanCPTDesc3 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB3 value="N">
+									<select name=Laterality size=0   id=Laterality3 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote3', 'spanCPTNote3', 'SpanCPTDesc3');">
+									<input type=hidden name=CPTNote id="CPTNote3" value="">
+									<span id="spanCPTNote3"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									4 &nbsp;
+									<input  id=cpt4 type=text size=8 name=s_cpt value="" onchange="validateCPT('4', this,'cpt4','CPTDesc4', 'Laterality4')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt4', 'SpanCPTDesc4')">
+									<input type=hidden id="dummyChargeCode4" name="dummyChargeCode" value="SR111104">
+									<input type=hidden id="CPTDesc4" name=CPTDesc value="">
+									<span id=SpanCPTDesc4 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB4 value="N">
+									<select name=Laterality size=0   id=Laterality4 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote4', 'spanCPTNote4', 'SpanCPTDesc4');">
+									<input type=hidden name=CPTNote id="CPTNote4" value="">
+									<span id="spanCPTNote4"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									5 &nbsp;
+									<input  id=cpt5 type=text size=8 name=s_cpt value="" onchange="validateCPT('5', this,'cpt5','CPTDesc5', 'Laterality5')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt5', 'SpanCPTDesc5')">
+									<input type=hidden id="dummyChargeCode5" name="dummyChargeCode" value="SR111105">
+									<input type=hidden id="CPTDesc5" name=CPTDesc value="">
+									<span id=SpanCPTDesc5 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB5 value="N">
+									<select name=Laterality size=0   id=Laterality5 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote5', 'spanCPTNote5', 'SpanCPTDesc5');">
+									<input type=hidden name=CPTNote id="CPTNote5" value="">
+									<span id="spanCPTNote5"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									6 &nbsp;
+									<input  id=cpt6 type=text size=8 name=s_cpt value="" onchange="validateCPT('6', this,'cpt6','CPTDesc6', 'Laterality6')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt6', 'SpanCPTDesc6')">
+									<input type=hidden id="dummyChargeCode6" name="dummyChargeCode" value="SR111106">
+									<input type=hidden id="CPTDesc6" name=CPTDesc value="">
+									<span id=SpanCPTDesc6 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB6 value="N">
+									<select name=Laterality size=0   id=Laterality6 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote6', 'spanCPTNote6', 'SpanCPTDesc6');">
+									<input type=hidden name=CPTNote id="CPTNote6" value="">
+									<span id="spanCPTNote6"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									7 &nbsp;
+									<input  id=cpt7 type=text size=8 name=s_cpt value="" onchange="validateCPT('7', this,'cpt7','CPTDesc7', 'Laterality7')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt7', 'SpanCPTDesc7')">
+									<input type=hidden id="dummyChargeCode7" name="dummyChargeCode" value="SR111107">
+									<input type=hidden id="CPTDesc7" name=CPTDesc value="">
+									<span id=SpanCPTDesc7 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB7 value="N">
+									<select name=Laterality size=0   id=Laterality7 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote7', 'spanCPTNote7', 'SpanCPTDesc7');">
+									<input type=hidden name=CPTNote id="CPTNote7" value="">
+									<span id="spanCPTNote7"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									8 &nbsp;
+									<input  id=cpt8 type=text size=8 name=s_cpt value="" onchange="validateCPT('8', this,'cpt8','CPTDesc8', 'Laterality8')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt8', 'SpanCPTDesc8')">
+									<input type=hidden id="dummyChargeCode8" name="dummyChargeCode" value="SR111108">
+									<input type=hidden id="CPTDesc8" name=CPTDesc value="">
+									<span id=SpanCPTDesc8 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB8 value="N">
+									<select name=Laterality size=0   id=Laterality8 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote8', 'spanCPTNote8', 'SpanCPTDesc8');">
+									<input type=hidden name=CPTNote id="CPTNote8" value="">
+									<span id="spanCPTNote8"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									9 &nbsp;
+									<input  id=cpt9 type=text size=8 name=s_cpt value="" onchange="validateCPT('9', this,'cpt9','CPTDesc9', 'Laterality9')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt9', 'SpanCPTDesc9')">
+									<input type=hidden id="dummyChargeCode9" name="dummyChargeCode" value="SR111109">
+									<input type=hidden id="CPTDesc9" name=CPTDesc value="">
+									<span id=SpanCPTDesc9 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB9 value="N">
+									<select name=Laterality size=0   id=Laterality9 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote9', 'spanCPTNote9', 'SpanCPTDesc9');">
+									<input type=hidden name=CPTNote id="CPTNote9" value="">
+									<span id="spanCPTNote9"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+								<tr>
+								<td width=40%>
+									10 &nbsp;
+									<input  id=cpt10 type=text size=8 name=s_cpt value="" onchange="validateCPT('10', this,'cpt10','CPTDesc10', 'Laterality10')">&nbsp;&nbsp;
+									<img tabIndex=0  src="../images/help.gif" onClick="showHelp('ADD','CPT', 'cpt10', 'SpanCPTDesc10')">
+									<input type=hidden id="dummyChargeCode10" name="dummyChargeCode" value="SR111110">
+									<input type=hidden id="CPTDesc10" name=CPTDesc value="">
+									<span id=SpanCPTDesc10 class=CPTHelpSpan></span>
+								</td>
+								<td>
+									<input type=hidden name=DisablePreOpAB id=DisablePreOpAB10 value="N">
+									<select name=Laterality size=0   id=Laterality10 ><option value=I> Select<option value = 'L'>Left<option value = 'R'>Right<option value = 'B'>Bilateral<option value = 'U'>Unknown</select>
+									<img tabindex=0 src="../../common/images/edit.png" onclick="showMoreInfo('CPT', 'CPTNote10', 'spanCPTNote10', 'SpanCPTDesc10');">
+									<input type=hidden name=CPTNote id="CPTNote10" value="">
+									<span id="spanCPTNote10"><font class=clsDummyText> Click on icon to write surgery description ... </font></span>
+								</td>
+								</tr>
+						
+						</table>
+						</td>
+						<td valign=top><br/>
+						
+							<input class=longButton id="btnMD" disabled type=button value="Check Rules" onclick="getCustomMedicalNecessity()">
+						
+						</td> </tr>
+				</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=6>
+					<div id="divMedicalNessity" class="clsMedicalNessity"><br/><center> <font color=gray> <p/> &nbsp; <p/> &nbsp; <p/>This section shows medical necessity outcome</gray><center></div>
+			</td>
+		</tr>
+	</table>
+	<div id='CMSSection' style='text-align: left; background-color:#E5E5AC'><input type=hidden name='FormType' value = 'PKH_RG'>
+<input type=hidden name='PracticeId' value = '4'>
+<input type=hidden name='CMS_FLAG' value = 'X'>
+<input type=hidden name=CMSTypeList value=''>
+
+
+</div> <br/> &nbsp;
+	<table id="AdditionalStepsTable" border=0 align="center">
+		<tr>
+			<td align=right style="background-color:#FFFF00; color:#0000FF"> Additional Steps </td>
+			<td align=left>
+				<select name="ActionAfterCreate" style="color:#0000FF">
+					<option value="X"> None
+					
+					<option value="D"> Upload Document/s
+				</select>
+			</td>
+		</tr>
+	</table>
+
+	<table height=10% width=100%>
+		<tr>
+			<td align=center>
+				<div id="DivButtons">
+				
+						<input class=longButton type=button name=btnAdd value=Submit onclick="validateAndSubmit('ADD');"> &nbsp;&nbsp;&nbsp;
+						<!-- <input class=longButton type=button name=btnAddUploadDoc value="Submit & Upload Docs" onclick="validateAndSubmit('ADD_DOCUMENT');"> &nbsp;&nbsp;&nbsp; -->				
+					
+				<input class=longButton type=button name=Back value=Back onclick="showPage1()"> &nbsp;&nbsp;&nbsp;
+				<input class=longButton type=button name=Cancel value=Cancel onclick="self.close()">
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	
+	<iframe id="iFrameMN" name="iFrameMN"  style="display:none1"  src="../../common/blank.html" width=0 height=0></iframe>
+	<iframe id="iFramePhy" name="iFramePhy"  style="display:none1"  src="../../common/blank.html" width=0 height=0></iframe>
+</div>
+
+</form>
+<iframe name=iframe1 id=iframe1 width=0 height=0 src="../../common/blank.html"> </iframe>
+<iframe name=iframe2 id=iframe2 width=0 height=0 src="../../common/blank.html"> </iframe>
+	
+</body>
+</html> 

@@ -9,5 +9,5 @@ import { Component } from "@angular/core";
 export class PatientInfoComponent
 {
     name:string="child";
-    
+    firstname="child"
 }
