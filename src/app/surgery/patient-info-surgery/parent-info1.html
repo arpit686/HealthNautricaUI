@@ -1,410 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-  <!-- <div class="container"><h1>Bootstrap  tab panel example (using nav-pills)  </h1></div>
-<div id="exTab1" class="container">
-<ul  class="nav nav-pills">
-			<li class="active">
-        <a  href="#1a" data-toggle="tab">Overview</a>
-			</li>
-			<li><a href="#2a" data-toggle="tab">Using nav-pills</a>
-			</li>
-			<li><a href="#3a" data-toggle="tab">Applying clearfix</a>
-			</li>
-  		<li><a href="#4a" data-toggle="tab">Background color</a>
-			</li>
-		</ul>
 
-			<div class="tab-content clearfix">
-			  <div class="tab-pane active" id="1a">
-          <h3>Content's background color is the same for the tab</h3>
+<!-- <div class="container">
+		<div class="col-md-12">
+			<div class="col-md-5">
+				<div class="form-group">
+					<label class="col-md-3">Name</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control">
+					</div>
 				</div>
-				<div class="tab-pane" id="2a">
-          <h3>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h3>
-				</div>
-        <div class="tab-pane" id="3a">
-          <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3>
-				</div>
-          <div class="tab-pane" id="4a">
-          <h3>We use css to change the background color of the content to be equal to the tab</h3>
-				</div>
+				<div class="form-group">
+					<label class="col-md-3">Name</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control">
+					</div>
+				</div> 
 			</div>
-  </div>  -->
+			<div class="col-md-7">
+			</div>
+		</div>
+</div> -->
 
-  <style>
-body {
-  padding : 10px ;
+<div style="border:1px solid black;" class="container-fluid" >
+<div class="row">
+	<div class="form-group">
+	<div class="col-md-3">
+		<label>Last Name*</label>
+		<input type="text" class="form-control" formControlName="lastname">
+		
+		<label>First Name*</label>
+		<input type="text" class="form-control" formControlName="firstname">
+		
+		
+		<div class="row">
+		<div class="col-md-7">
+		<label>MI</label> 
+		    <input type="text" class="form-control" formControlName="mi">
+		
+		</div>
+		<div class="col-md-5">
+		<label>D.O.B</label>
+			<input type="text" class="form-control" formControlName="dob">
+		
+		</div>
+		</div>
 
-}
+		<div class="row">
+			<div class="col-md-7">
+		    <label>SSN</label>
+			<input type="text" class="form-control" formControlName="ssn">
+			</div>
+		    <div class="col-md-5"> 
+	        <div class="form-group">
+            <label >Gender</label>
+        <select class="form-control" id="gender1" formControlName="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>          
+	        </div>  
+		    </div>
+	</div>
+	</div>
 
-#exTab1 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
+<div class="col-md-9">
+	 <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#tabs_1">Contact info</a></li>
+    <li><a data-toggle="tab" href="#tabs_2">Address</a></li>
+    <li><a data-toggle="tab" href="#tabs_3">Pre Subscriber</a></li>
+	<li><a data-toggle="tab" href="#tabs_4">Pre Insurance</a></li>
+	<li><a data-toggle="tab" href="#tabs_5">Sec Subscriber</a></li>
+	<li><a data-toggle="tab" href="#tabs_6">Sec Insurance</a></li>
+	<li><a data-toggle="tab" href="#tabs_7">Work Comp Details</a></li>
+	<li><a data-toggle="tab" href="#tabs_8">Auto Details</a></li>
+  </ul>
 
-#exTab2 h3 {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
-
-/* remove border radius for the tab */
-
-#exTab1 .nav-pills > li > a {
-  border-radius: 0;
-}
-
-/* change border radius for the tab , apply corners on top*/
-
-#exTab3 .nav-pills > li > a {
-  border-radius: 4px 4px 0 0 ;
-}
-
-#exTab3 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
-}
-
-
-
-
-
-
-
-
-  .small { font-size:8pt; margin-left:0em; margin-right:0em }
-  .medium { font-size:10pt; margin-left:0em; margin-right:0em }
-  .large { font-size:16pt; margin-left:0em; margin-right:0em }
-
-  input[type=text]  {text-transform:uppercase; height:20; font-size:9pt}
-  input.upperinput  {text-transform:uppercase; height:20; font-size:9pt}
-  textarea  {text-transform:uppercase; font-size:9pt}
-  select {height:20; font-size:9pt}
-  select.big {height:60;}
-  select.veryBig {height:100;}
-
-  .shod1 {font-size:12pt;filter:blur(DIRECTION=45, strength=3, positive=false) ; }
-  .shod2 {font-size:10pt;font-weight:bold; filter:alpha(opacity=100);}
-
-  .PatientFlag_A {background-color:black;color:yellow} 		/*Appointment Related*/
-  .PatientFlag_B {background-color:black;color:red}			/*Payment Related*/
-  .PatientFlag_C {background-color:#99FF99;color:black}		/*Preventive Care Overdue*/
-  .PatientFlag_D {background-color:#99FFFF;color:black}		/*HMO*/
-
-
-  input.Mandatory{background-color:#DFFFFF}
-  select.Mandatory{background-color:#DFFFFF}
-
-  @media print
-  {
-  .NoPrint {display:none}
-  }
-
-  	.C_APPT_EMR {color:#0000FF }
-	.C_OBSOLETE {color:#FF0000 }
-
-</style>
-
-
-
-
-<table width=95% id=tHeader border=0 align="center" style="background-color:#E5E5AC">
-	<tr>
-        
-		<td align=center  width=35%>
-			<table style="margin-right:25px" class=tabTD border=0 height=100% width=100% cellspacing=0 cellpadding=3 id=tHeaderNonTab style="background-color:#FBF8EF;">
-				<tr class=tabTD>
-					<td align=right> Last Name </td>
-					<td align=left> <input type=text name =PatLastName value="TEST" size=20 maxlength=20 id=PatLastName onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()' [(ngModel)]="lastname" > <b> * </b> </td>
-				</tr>
-				<tr class=tabTD>
-					<td align=right> First NameS </td>
-					<td align=left>
-						<input type=text name =PatFirstName  size=20 maxlength=20 id=PatFirstName onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()' [(ngModel)]="firstname" > <b> * </b>
-						&nbsp;&nbsp; MI
-                        <input type="text" name =PatMiddleInit value=' ' size=2 maxlength=1 id=PatMiddleInit onkeypress='return makeUppercase()' >
-                         
-					</td>
-				</tr>
-				<tr class=tabTD>
-					<td align=right> DOB </td>
-					<td align=left> <input type=text class='upperinput' name =PatDOB value="1/1/1984" size=12 maxlength=12 id=PatDOB OnBlur='return isPastDate(this)' [(ngModel)]="dob" > <b> * </b>
-                        &nbsp;&nbsp; Age: 33 Years
-                       
-					</td>
-				</tr>
-				<tr class=tabTD>
-					<td  align=right>
-                        SSN
-                	</td>
-					<td align=left>
-					<input type="text" name =PatSSN value='' size=11 maxlength=11 id=PatSSN onChange='return isValidSSN(this)'[(ngModel)]="ssn" > &nbsp;&nbsp;&nbsp;
-					Gender &nbsp;&nbsp;<select name=PatGender size=0  class=mandatoryHeader id=PatGender ><option value='X'>Select<option value = 'M' selected>Male<option value = 'F'>Female</select>
-					</td>
-				</tr>
-			</table> <!-- tHeaderNonTab  <a  href="#1a" data-toggle="tab">Overview</a>
-			</li> -->
-		</td>
-		<td>
-           
-			<div id="tabs"  style="background-color:#E5E5AC;" >
-				<ul class="nav nav-tabs">
-                    <li class="active">
-					<a href="#tabs_1" data-toggle="tab"> <font size=1> Contact Info </font></a></li>
-					<li><a href="#tabs_2" data-toggle="tab"><font size=1> Address</font></a></li>
-					<li><a href="#tabs_3" data-toggle="tab"><font size=1> Pri Subscriber</font></a></li>
-					<li><a href="#tabs_4" data-toggle="tab"><font size=1> Pri Insurance</font></a></li>
-					<li><a href="#tabs_5" data-toggle="tab"><font size=1> Sec Subscriber</font></a></li>
-					<li><a href="#tabs_6"  data-toggle="tab"><font size=1> Sec Insurance</font></a></li>
-					<li><a href="#tabs_7" data-toggle="tab"><font size=1> WorkComp Details</font></a></li>
-					<li><a href="#tabs_8" data-toggle="tab"><font size=1> Auto Details</font></a></li>
-                </ul>
-                
-                <!-- <div class="tab-content clearfix">
-			  <div class="tab-pane active" id="1a">
-          <h3>Content's background color is the same for the tab</h3>
-				</div> -->
-              <div class="tab-content clearfix">
+  			<div class="tab-content">
 				<div class="tab-pane active" id="tabs_1" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td align=right> Primary Phone </td>
 							<td align=left>
-								<input type=text name =PatTelNo value="630-519-3558" size=12 maxlength=12 id=PatTelNo onChange='return isValidNANP(this)' onBlur='this.value = this.value.toUpperCase()' [(ngModel)]="primaryphone"> <b> * </b>  &nbsp;&nbsp;&nbsp;
-								<select name=PrimaryPhoneType size=0  id=PrimaryPhoneType><option value=X>Select<option value = 'H' selected>Home<option value = 'C'>Cell<option value = 'W'>Work</select></td>
+								<input type=text name =PatTelNo  formControlName="primaryphone" id=PatTelNo  formControlName="primaryphone"> <b> * </b>  &nbsp;&nbsp;&nbsp;
+
+								 <select formControlName="primaryPhoneType1" >
+									<option value="">Select</option>
+			    					<option *ngFor="let phone of contactTypes" [value]="phone.value">{{phone.name}}</option>
+								</select>
+								 
+								
 							<td align=right> Cell Phone </td>
 							<td align=left>
-								<input type="text" name =PatCellNo value='' size=12 maxlength=12 id=PatCellNo onChange='return isValidNANP(this)' [(ngModel)]="cellphone">&nbsp;&nbsp;&nbsp;
-								<select name=SecondaryPhoneType size=0  id=SecondaryPhoneType><option value=X>Select<option value = 'H'>Home<option value = 'C' selected>Cell<option value = 'W'>Work</select> </td>
+								<input type="text" name =PatCellNo id=PatCellNo formControlName="cellphone">&nbsp;&nbsp;&nbsp;
+
+							
+								<select formControlName="cellphone1">
+									<option value="">Select</option>
+									<option *ngFor="let phone of contactTypes" [value]="phone.value">{{phone.name}}</option>
+								</select>   
+
+								 
 						</tr>
 						<tr class=tabTD>
 							<td align=right> Alternate Phone </td>
 							<td align=left>
-								<input type="text" name =PatWorkNo value='' size=12 maxlength=12 id=PatWorkNo onChange='return isValidNANP(this)' [(ngModel)]="alternativephone"> &nbsp;&nbsp;&nbsp;
-								<select name=AlternatePhoneType size=0  id=AlternatePhoneType ><option value=X>Select<option value = 'H'>Home<option value = 'C'>Cell<option value = 'W'>Work</select> </td>
+								<input type="text" name =PatWorkNo  id=PatWorkNo formControlName="alternatephone"> &nbsp;&nbsp;&nbsp;
+								
+								<select formControlName="alternatephone1">
+								   <option value="">Select</option>
+								   <option *ngFor="let phone of contactTypes" [value]="phone.value"> {{phone.name}} </option>
+								</select>
+								
+								
 							<td align=right> Pager </td>
-							<td align=left> <input type="text" name =PatPagerNo value='' size=12 maxlength=12 id=PatPagerNo onChange='return isValidNANP(this)' > </td>
+							<td align=left> <input type="text"  name =PatPagerNo  id=PatPagerNo formControlName="pager" > </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> EMail </td>
-							<td align=left ><input type="text" name =PatEMail value='' size=48 maxlength=64 id=PatEMail [(ngModel)]="email"> </td>
+							<td align=left ><input type="text"  name =PatEMail  id=PatEMail formControlName="email"> </td>
 							<td align=right> Best Time To Call </td>
-							<td align=left ><input type="text" name =BestTimeToCall value='' size=16 maxlength=64 id=BestTimeToCall [(ngModel)]="besttimetocall"> </td>
+							<td align=left ><input type="text" name =BestTimeToCall  id=BestTimeToCall formControlName="besttimetocall"> </td>
 						</tr>
-					</table>
-                </div>
-              
-                
+                    </table>
+
+				</div>
+				
 				<div class="tab-pane " id="tabs_2" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td align=right nowrap> Address 1</td>
-							<td align=left colspan=3> <input type="text" name =PatAddress1 value="1S376 SUMMIT AVE." size=30 maxlength=30 id=PatAddress1 onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> </td>
+							<td align=left colspan=3> <input type="text" name =PatAddress1  id=PatAddress1 formControlName="address1"> </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> Address 2 </td>
-							<td align=left colspan=3> <input type="text" name =PatAddress2 value="" size=30 maxlength=30 id=PatAddress2 onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> </td>
+							<td align=left colspan=3> <input type="text" name =PatAddress2  id=PatAddress2  formControlName="address2"> </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> City</td>
-							<td align=left> <input type="text" name =PatCity value="OAKBROOK" size=20 maxlength=20 id=PatCity onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'> </td>
+							<td align=left> <input type="text" name =PatCity id=PatCity formControlName="city"> </td>
 							<td align=right> State </td>
-							<td align=left> <input type="text" name =PatState value="IL" size=2 maxlength=2 id=PatState onkeypress='return makeUppercase()' onBlur='this.value = this.value.toUpperCase()'>
+							<td align=left> <input type="text" name =PatState  id=PatState   formControlName="state">
 								&nbsp; Zip
-								<input type="text" name =PatZip value='60181' size=10 maxlength=10 id=PatZip onChange='return isValidZipCode(this)' > </td>
+								<input type="text" name =PatZip value='60181' id=PatZip formControlName="zip"> </td>
 						</tr>
 					</table>
-                </div>
-                
-				<div class="tab-pane " id="tabs_3" style="padding: 0px 0px 0px 0px;">
+				</div>
+				
+					<div class="tab-pane " id="tabs_3" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td align=right> Patient Relationship to Subscriber </td>
-							<td align=left> <select name=SubscriberRelation size=0  id=SubscriberRelation onChange="return setSubscriberName('P')"><option value=-1> Select<option value = '01'>Self<option value = '02'>Spouse<option value = '03'>Child<option value = '04'>Step Child<option value = '05'>Parent<option value = '99'>Other</select> </td>
-						</tr>
+							<!-- <td align=left> <select name=SubscriberRelation size=0  id=SubscriberRelation onChange="return setSubscriberName('P')"><option value=-1> Select<option value = '01'>Self<option value = '02'>Spouse<option value = '03'>Child<option value = '04'>Step Child<option value = '05'>Parent<option value = '99'>Other</select> </td> -->
+						    <td align-left>
+							
+							<select formControlName="patientRelationship">
+								<option value="">Select</option>
+								<option *ngFor="let subscriber of patientType" [value]="subscriber.value">{{subscriber.name}}</option>
+							</select>
+							
+						</td>
+							</tr>
 						<tr class=tabTD>
 							<td align=right> Last Name </td>
-							<td align=left> <input type="text" name =SubscriberLastName value='' size=20 maxlength=20 id=SubscriberLastName onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =SubscriberLastName id=SubscriberLastName  formControlName="lastname1">  </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> FirstName </td>
-							<td align=left> <input type="text" name =SubscriberFirstName value='' size=20 maxlength=20 id=SubscriberFirstName onkeypress='return makeUppercase()' >  &nbsp;&nbsp;&nbsp;
-							MI &nbsp;&nbsp;<input type="text" name =SubscriberMiddleInit value='' size=1 maxlength=1 id=SubscriberMiddleInit onkeypress='return makeUppercase()' >
+							<td align=left> <input type="text" name =SubscriberFirstName   id=SubscriberFirstName   formControlName="firstname1">  &nbsp;&nbsp;&nbsp;
+							MI &nbsp;&nbsp;<input type="text" name =SubscriberMiddleInit  id=SubscriberMiddleInit  formControlName="subscribermi" >
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div class="tab-pane " id="tabs_4" style="padding: 0px 0px 0px 0px;">
+				
+					<div class="tab-pane " id="tabs_4" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td align=right> Name </td>
-							<td align=left colspan=3>
-							<select name=insNameList size=0  onchange="setInsNameFromList(this, 'InsName');"><option value=-1>Select<option value = 'AARP'>AARP<option value = 'AETNA'>AETNA<option value = 'ANTHEM DIRECT'>ANTHEM DIRECT<option value = 'BLUE CROSS BLUE SHIELD - IL'>BLUE CROSS BLUE SHIELD - IL<option value = 'CIGNA'>CIGNA<option value = 'CORESOURCE - MD, PA, IL'>CORESOURCE - MD, PA, IL<option value = 'COVENTRY HEALTHCARE'>COVENTRY HEALTHCARE<option value = 'GREAT-WEST HEALTHCARE'>GREAT-WEST HEALTHCARE<option value = 'HUMANA'>HUMANA<option value = 'HUMANA HMO'>HUMANA HMO<option value = 'ILLINOIS MEDICAID'>ILLINOIS MEDICAID<option value = 'MEDICARE'>MEDICARE<option value = 'TRICARE'>TRICARE<option value = 'UNITED HEALTHCARE'>UNITED HEALTHCARE<option value = 'SELF PAY'>SELF PAY<option value = 'WORKER COMP'>WORKER COMP<option value = 'OTHER'>OTHER</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name =InsName value='' size=48 maxlength=64 id=InsName onKeyPress='return makeUppercase()' class=readonly >
+                            <!-- <td align=left ><select name=insNameLisat size=0  onchange="setInsNameFromList(this, 'InsName');" ><option value=-1>Select<option value = 'AARP'>AARP<option value = 'AETNA'>AETNA<option value = 'ANTHEM DIRECT'>ANTHEM DIRECT<option value = 'BLUE CROSS BLUE SHIELD - IL'>BLUE CROSS BLUE SHIELD - IL<option value = 'CIGNA'>CIGNA<option value = 'CORESOURCE - MD, PA, IL'>CORESOURCE - MD, PA, IL<option value = 'COVENTRY HEALTHCARE'>COVENTRY HEALTHCARE<option value = 'GREAT-WEST HEALTHCARE'>GREAT-WEST HEALTHCARE<option value = 'HUMANA'>HUMANA<option value = 'HUMANA HMO'>HUMANA HMO<option value = 'ILLINOIS MEDICAID'>ILLINOIS MEDICAID<option value = 'MEDICARE'>MEDICARE<option value = 'TRICARE'>TRICARE<option value = 'UNITED HEALTHCARE'>UNITED HEALTHCARE<option value = 'SELF PAY'>SELF PAY<option value = 'WORKER COMP'>WORKER COMP<option value = 'OTHER'>OTHER</select>&nbsp;&nbsp;&nbsp;&nbsp; -->
+							  
+								<td align-left>
+                                  <select formControlName ="InsName">
+									  <option value="">Select</option>
+									  <option *ngFor="let insname of insuranceType" [value]="insname.value">{{insname.name}}</option>
+                                  </select>
+								<input type="text" name =InsName  id=InsName  class=readonly >
 							</td>
+
 							<td align=right> Referral </td>
-							<td> <input type="text" name =PInsReferral value='' size=20 maxlength=32 id=PInsReferral onkeypress='return makeUppercase()' /> </td>
-							<td> &nbsp; </td>
+							<td> <input type="text" name =PInsReferral  id=PInsReferral  formControlName="reffreal" /> </td>
+							<td> </td>
 							<td>
-									<input type=checkbox  id=isAuto onclick='setAutoTab()'  name='isAuto'>Auto<input type=checkbox  id=isWorkMan onclick='setWorkmanTab()'  name='isWorkman'>Work<input type=checkbox  id=isHMO  name='isHMO'>HMO
+									<input type=checkbox  id=isAuto  name='isAuto'>Auto<input type=checkbox   name='isWorkman'>Work<input type=checkbox  id=isHMO  name='isHMO' formControlName="isauto">HMO
 							</td>
 						</tr>
 						<tr  class=tabTD>
 							<td align=right> Address1 </td>
-							<td> <input type="text" name =PInsAddress1 value='' size=20 maxlength=30 id=PInsAddress1 onkeypress='return makeUppercase()' /> </td>
+							<td> <input type="text" name =PInsAddress1 id=PInsAddress1  formControlName="pinaddress1"/> </td>
 							<td align=right> Address2 </td>
-							<td> <input type="text" name =PInsAddress2 value='' size=20 maxlength=30 id=PInsAddress2 onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =PInsAddress2   id=PInsAddress2  formControlName="pinaddress2">
 							<td align=right> City </td>
-							<td> <input type="text" name =PInsCity value='' size=20 maxlength=20 id=PInsCity onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =PInsCity  id=PInsCity formControlName="pincity">
 							<td align=right> State </td>
-							<td> <input type="text" name =PInsState value='' size=2 maxlength=2 id=PInsState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip
-								<input type="text" name =PInsZip value='' size=10 maxlength=10 id=PInsZip onChange='isValidZipCode(this)' >
+							<td> <input type="text" name =PInsState  id=PInsState  formControlName="pinstate" >&nbsp;&nbsp;&nbsp; Zip
+
 							</td>
 						</tr>
 						<tr class=tabTD>
+                            <td  align=right> Ins ID </td>
+                            <td align=left><input type="text" name =PInsZip  id=PInsZip formControlName="pinszip">
 							<td  align=right> Ins ID </td>
-							<td align=left> <input type="text" name =InsId value='' size=20 maxlength=20 id=InsId onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =InsId  id=InsId  formControlName="insid">  </td>
 							<td  align=right> Ins Group </td>
-							<td align=left> <input type="text" name =InsGroupName value='' size=20 maxlength=20 id=InsGroupName onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =InsGroupName  id=InsGroupName formControlName="insgrp">  </td>
 							<td align=right> Phone </td>
-							<td  align=left > <input type="text" name =InsPhone value='' size=12 maxlength=12 id=InsPhone onChange='return isValidNANP(this)' >  </td>
+							<td  align=left > <input type="text" size="12" name =InsPhone  id=InsPhone formControlName="phone">  </td>
 							<td  align=right> Auth # </td>
-							<td align=left> <input type="text" name =PInsAuth value='' size=20 maxlength=32 id=PInsAuth onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =PInsAuth  id=PInsAuth formControlName="auth">  </td>
 						</tr>
-					</table>
-				</div>
+                    </table>
+
+                </div>
+
+
 				<div class="tab-pane " id="tabs_5" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td align=right> Patient Relationship to Subscriber </td>
-							<td align=left> <select name=SecSubscriberRelation size=0  id=SecSubscriberRelation onChange="return setSubscriberName('S')"><option value=-1> Select<option value = '01'>Self<option value = '02'>Spouse<option value = '03'>Child<option value = '04'>Step Child<option value = '05'>Parent<option value = '99'>Other</select> </td>
-						</tr>
-						<tr class=tabTD>
+							
+						
+						<td align-left> 
+							<select formControlName="SurRelationship">
+								<option value="">Select</option>
+								<option *ngFor="let subscriber of patientType" [value]="subscriber.value">{{subscriber.name}}</option>
+							</select>
+						</td>
+							<tr class=tabTD>
 							<td align=right> Last Name </td>
-							<td align=left> <input type="text" name =SecSubscriberLastName value='' size=20 maxlength=20 id=SecSubscriberLastName onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =SecSubscriberLastName  id=SecSubscriberLastName  formControlName="lasttname2">  </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> FirstName </td>
-							<td align=left> <input type="text" name =SecSubscriberFirstName value='' size=20 maxlength=20 id=SecSubscriberFirstName onkeypress='return makeUppercase()' >  &nbsp;&nbsp;&nbsp;
-							MI &nbsp;&nbsp;<input type="text" name =SecSubscriberMiddleInit value='' size=1 maxlength=1 id=SecSubscriberMiddleInit onkeypress='return makeUppercase()' >
+							<td align=left> <input type="text" name =SecSubscriberFirstName  id=SecSubscriberFirstName  formControlName="firsttname2">  &nbsp;&nbsp;&nbsp;
+							MI &nbsp;&nbsp;<input type="text" name =SecSubscriberMiddleInit id=SecSubscriberMiddleInit formControlName="middlename2">
 							</td>
 						</tr>
 					</table>
 				</div>
+
 				<div class="tab-pane " id="tabs_6" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						 <tr class=tabTD>
 							<td align=right> Name </td>
 							<td align=left colspan=3>
-							<select name=secInsNameList size=0  onchange="setInsNameFromList(this, 'SecInsName');"><option value=-1>Select<option value = 'AARP'>AARP<option value = 'AETNA'>AETNA<option value = 'ANTHEM DIRECT'>ANTHEM DIRECT<option value = 'BLUE CROSS BLUE SHIELD - IL'>BLUE CROSS BLUE SHIELD - IL<option value = 'CIGNA'>CIGNA<option value = 'CORESOURCE - MD, PA, IL'>CORESOURCE - MD, PA, IL<option value = 'COVENTRY HEALTHCARE'>COVENTRY HEALTHCARE<option value = 'GREAT-WEST HEALTHCARE'>GREAT-WEST HEALTHCARE<option value = 'HUMANA'>HUMANA<option value = 'HUMANA HMO'>HUMANA HMO<option value = 'ILLINOIS MEDICAID'>ILLINOIS MEDICAID<option value = 'MEDICARE'>MEDICARE<option value = 'TRICARE'>TRICARE<option value = 'UNITED HEALTHCARE'>UNITED HEALTHCARE<option value = 'SELF PAY'>SELF PAY<option value = 'WORKER COMP'>WORKER COMP<option value = 'OTHER'>OTHER</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name =SecInsName value='' size=48 maxlength=64 id=SecInsName onKeyPress='return makeUppercase()' class=readonly >
+							<!-- <select name=secInsNameList size=0  onchange="setInsNameFromList(this, 'SecInsName');"><option value=-1>Select<option value = 'AARP'>AARP<option value = 'AETNA'>AETNA<option value = 'ANTHEM DIRECT'>ANTHEM DIRECT<option value = 'BLUE CROSS BLUE SHIELD - IL'>BLUE CROSS BLUE SHIELD - IL<option value = 'CIGNA'>CIGNA<option value = 'CORESOURCE - MD, PA, IL'>CORESOURCE - MD, PA, IL<option value = 'COVENTRY HEALTHCARE'>COVENTRY HEALTHCARE<option value = 'GREAT-WEST HEALTHCARE'>GREAT-WEST HEALTHCARE<option value = 'HUMANA'>HUMANA<option value = 'HUMANA HMO'>HUMANA HMO<option value = 'ILLINOIS MEDICAID'>ILLINOIS MEDICAID<option value = 'MEDICARE'>MEDICARE<option value = 'TRICARE'>TRICARE<option value = 'UNITED HEALTHCARE'>UNITED HEALTHCARE<option value = 'SELF PAY'>SELF PAY<option value = 'WORKER COMP'>WORKER COMP<option value = 'OTHER'>OTHER</select>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name =SecInsName value='' size=48 maxlength=64 id=SecInsName onKeyPress='return makeUppercase()' class=readonly > -->
+							
+                                  <select formControlName="SInsName">
+									  <option value="">Select</option>
+									  <option *ngFor="let insname of insuranceType" [value]="insname.value">{{insname.name}}</option>
+                                  </select>
+								<input type="text" name =InsName id=InsName  class=readonly formControlName="insname">
+							
 							</td>
                             <td align=right> Referral </td>
-							<td> <input type="text" name =SInsReferral value='' size=20 maxlength=32 id=SInsReferral onkeypress='return makeUppercase()' /> </td>
+							<td> <input type="text" name =SInsReferral  id=SInsReferral  formControlName="insreffreal"/> </td>
 							<td colspan=2> &nbsp; </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> Address1 </td>
-							<td> <input type="text" name =SInsAddress1 value='' size=20 maxlength=30 id=SInsAddress1 onkeypress='return makeUppercase()' /> </td>
+							<td> <input type="text" name =SInsAddress1  id=SInsAddress1 formControlName="insaddress1"/> </td>
 							<td align=right> Address2 </td>
-							<td> <input type="text" name =SInsAddress2 value='' size=20 maxlength=30 id=SInsAddress2 onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =SInsAddress2  id=SInsAddress2 formControlName="insaddress2">
 							<td align=right> City </td>
-							<td> <input type="text" name =SInsCity value='' size=20 maxlength=20 id=SInsCity onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =SInsCity  id=SInsCity  formControlName="inscity">
 							<td align=right> State </td>
-							<td> <input type="text" name =SInsState value='' size=2 maxlength=2 id=SInsState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip
-								<input type="text" name =SInsZip value='' size=10 maxlength=10 id=SInsZip onChange='isValidZipCode(this)' >
+							<td> <input type="text" name =SInsState id=SInsState  formControlName="insstate">&nbsp;&nbsp;&nbsp; Zip
+								<input type="text" name =SInsZip  id=SInsZip  formControlName="inszip">
 							</td>
 						</tr>
 						<tr class=tabTD>
 							<td  align=right> Ins ID </td>
-							<td align=left> <input type="text" name =SecInsId value='' size=20 maxlength=20 id=SecInsId onkeypress='return makeUppercase()' />  </td>
+							<td align=left> <input type="text" name =SecInsId  id=SecInsId  formControlName="insid1"/>  </td>
 							<td  align=right> Ins Group </td>
-							<td align=left> <input type="text" name =SecInsGroupName value='' size=20 maxlength=20 id=SecInsGroupName onkeypress='return makeUppercase()' />  </td>
+							<td align=left> <input type="text" name =SecInsGroupName id=SecInsGroupName  formControlName="insgroup"/>  </td>
 							<td align=right> Phone </td>
-							<td  align=left > <input type="text" name =SecInsPhone value='' size=12 maxlength=12 id=v onChange='return isValidNANP(this)' >  </td>
+							<td  align=left > <input type="text" name =SecInsPhone  formControlName="insphone">  </td>
 							<td  align=right> Auth # </td>
-							<td align=left> <input type="text" name =SInsAuth value='' size=20 maxlength=32 id=SInsAuth onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =SInsAuth id=SInsAuth formControlName="insauth">  </td>
 						</tr>
 					</table>
 				</div>
+
 				<div class="tab-pane" id="tabs_7" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td align=right> Case Number </td>
-							<td align=left ><input type="text" name =WorkManCaseNo value='' size=20 maxlength=30 id=WorkManCaseNo onkeypress='return makeUppercase()' /> </td>
+							<td align=left ><input type="text" name =WorkManCaseNo id=WorkManCaseNo  formControlName="casenumber"/> </td>
 							<td align=right> Adjuster Last Name </td>
-							<td align=left> <input type="text" name =AdjusterLastName value='' size=20 maxlength=20 id=AdjusterLastName onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =AdjusterLastName  id=AdjusterLastName  formControlName="adjusterlastname">  </td>
 							<td align=right> Adjuster First Name </td>
-							<td align=left> <input type="text" name =AdjusterFirstName value='' size=20 maxlength=20 id=AdjusterFirstName onkeypress='return makeUppercase()' /> </td>
+							<td align=left> <input type="text" name =AdjusterFirstName id=AdjusterFirstName formControlName="adjusterfirstname"/> </td>
 							<td align=right> MI
-							<td align=left> <input type="text" name =AdjusterMiddleInit value='' size=1 maxlength=1 id=AdjusterMiddleInit onkeypress='return makeUppercase()' /> </td>
+							<td align=left> <input type="text" name =AdjusterMiddleInit id=AdjusterMiddleInit  formControlName="adjustermiddlename"/> </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> Address1 </td>
-							<td> <input type="text" name =WCAddress1 value='' size=20 maxlength=30 id=WCAddress1 onkeypress='return makeUppercase()' /> </td>
+							<td> <input type="text" name =WCAddress1  id=WCAddress1 formControlName="wcaddress1"/> </td>
 							<td align=right> Address2 </td>
-							<td> <input type="text" name =WCAddress2 value='' size=20 maxlength=30 id=WCAddress2 onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =WCAddress1  id=WCAddress1 formControlName="wcaddress1"/> </td>
+							<td> <input type="text" name =WCAddress2 id=WCAddress2  formControlName="wcaddress2">
 							<td align=right> City </td>
-							<td> <input type="text" name =WCCity value='' size=20 maxlength=20 id=WCCity onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =WCCity id=WCCity formControlName="wccity">
 							<td align=right> State </td>
-							<td> <input type="text" name =WCState value='' size=2 maxlength=2 id=WCState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip
-								<input type="text" name =WCZip value='' size=10 maxlength=10 id=WCZip onChange='isValidZipCode(this)' >
+							<td> <input type="text" name =WCState id=WCState formControlName="wcstate">&nbsp;&nbsp;&nbsp; Zip
+								<input type="text" name =WCZip id=WCZip  formControlName="wczip">
 							</td>
 						</tr>
 						<tr class=tabTD>
 							<td  align=right> Adjuster Phone </td>
-							<td align=left> <input type="text" name =AdjusterPhone value='' size=12 maxlength=12 id=AdjusterPhone onChange='return isValidNANP(this)' >  </td>
+							<td align=left> <input type="text" name =AdjusterPhone  id=AdjusterPhone  formControlName="adjusterphonenumber">  </td>
 							<td  align=right> Date Of Injury </td>
-							<td align=left> <input type="text" name =DateOfInjury value='' size=12 maxlength=12 id=DateOfInjury onChange='return isValidDate(this)' >  </td>
+							<td align=left> <input type="text" name =DateOfInjury id=DateOfInjury formControlName="dateofjourney">  </td>
 							<td colspan=4> &nbsp; </td>
 						</tr>
 					</table>
 				</div>
+
 				<div class="tab-pane" id="tabs_8" style="padding: 0px 0px 0px 0px;">
 					<table border=0 width=100%  cellspacing=0 cellpadding=3 >
 						<tr class=tabTD>
 							<td  align=right> Auto Case No </td>
-							<td align=left> <input type="text" name =AutoCaseNo value='' size=20 maxlength=32 id=AutoCaseNo onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =AutoCaseNo  id=AutoCaseNo  formControlName="autocaseno">  </td>
 							<td  align=right> Attorney Last Name </td>
-							<td align=left> <input type="text" name =AttorneyLastName value='' size=20 maxlength=20 id=AttorneyLastName onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =AttorneyLastName id=AttorneyLastName  formControlName="attorneylastname">  </td>
 							<td align=right> Attorney First Name </td>
-							<td  align=left > <input type="text" name =AttorneyFirstName value='' size=20 maxlength=20 id=AttorneyFirstName onkeypress='return makeUppercase()' >  </td>
+							<td  align=left > <input type="text" name =AttorneyFirstName id=AttorneyFirstName formControlName="attorneyfirstname">  </td>
 							<td  align=right> MI </td>
-							<td align=left> <input type="text" name =AttorneyMiddleInit value='' size=1 maxlength=1 id=AttorneyMiddleInit onkeypress='return makeUppercase()' >  </td>
+							<td align=left> <input type="text" name =AttorneyMiddleInit  id=AttorneyMiddleInit formControlName="attorneymiddleinit">  </td>
 						</tr>
 						<tr class=tabTD>
 							<td align=right> Address1 </td>
-							<td> <input type="text" name =AutoAddress1 value='' size=20 maxlength=30 id=AutoAddress1 onkeypress='return makeUppercase()' /> </td>
+							<td> <input type="text" name =AutoAddress1  id=AutoAddress1  formControlName="autoaddress1"/> </td>
 							<td align=right> Address2 </td>
-							<td> <input type="text" name =AutoAddress2 value='' size=20 maxlength=30 id=AutoAddress2 onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =AutoAddress2 value='' size=20 maxlength=30 id=AutoAddress2 onkeypress='return makeUppercase()' formControlName="autoaddress2">
 							<td align=right> City </td>
-							<td> <input type="text" name =AutoCity value='' size=20 maxlength=20 id=AutoCity onkeypress='return makeUppercase()' >
+							<td> <input type="text" name =AutoCity value='' size=20 maxlength=20 id=AutoCity onkeypress='return makeUppercase()' formControlName="autocity">
 							<td align=right> State </td>
-							<td> <input type="text" name =AutoState value='' size=2 maxlength=2 id=AutoState onkeypress='return makeUppercase()' >&nbsp;&nbsp;&nbsp; Zip
-								<input type="text" name =AutoZip value='' size=10 maxlength=10 id=AutoZip onChange='isValidZipCode(this)' >
+							<td> <input type="text" name =AutoState id=AutoState  formControlName="autistate">&nbsp;&nbsp;&nbsp; Zip
+								<input type="text" name =AutoZip id=AutoZip formControlName="autozip">
 							</td>
 						</tr>
 						<tr class=tabTD>
 							<td  align=right> Attorney Phone </td>
-							<td align=left> <input type="text" name =AttorneyPhone value='' size=12 maxlength=12 id=AttorneyPhone onChange='return isValidNANP(this)' >  </td>
+							<td align=left> <input type="text" name =AttorneyPhone id=AttorneyPhone onChange='return isValidNANP(this)' formControlName="attorneyphone">  </td>
 							<td  align=right> Date Of Injury </td>
-							<td align=left> <input type="text" name =AutoDateOfInjury value='' size=12 maxlength=12 id=AutoDateOfInjury onChange='return isValidDate(this)' >  </td>
+							<td align=left> <input type="text" name =AutoDateOfInjury  id=AutoDateOfInjury formControlName="autodateofenquiry">  </td>
 							<td colspan=4> &nbsp; </td>
 						</tr>
 					</table>
                 </div>
-              </div>
-			</div>
-        </td>
-        
-    
-    </tr>
-    
-    </table>
 
 
+  			</div>
+		</div>		
 
 
+</div>	
+</div> 
+</div>
 
-
-
-
-
+</body>
+</html>

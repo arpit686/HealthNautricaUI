@@ -25,23 +25,25 @@ export class SurgeryComponent implements OnInit
     patientType:IPatientType[];
     isolationPrecaution:IIsoltionPrecaution[];
 
+
     constructor(private _surgeryService:SurgeryService) {
 
     }
     ngOnInit()
-    {   
+    {
         this.contactTypes=this._surgeryService.getContactTypes();
         this.relationsheeps=this._surgeryService.getRelationsheep();
         this.insuranceCoNames=this._surgeryService.getInsuranceCoName();
         this.physicianNames=this._surgeryService.getPhysician();
         this.officeName=this._surgeryService.getOfficeName();
         this.surgeonName=this._surgeryService.getsurgeonname();
-        this.anesthsiaTypes=this._surgeryService.getannesthesiatypes();   
+        this.anesthsiaTypes=this._surgeryService.getannesthesiatypes();
         this.bloodTypes=this._surgeryService.getbloodTypes();
-        this.lattexTytpe=this._surgeryService.getlattexallergy(); 
+        this.lattexTytpe=this._surgeryService.getlattexallergy();
         this.alternativeAntibiotic=this._surgeryService.getalternativeantibiotic();
         this.patientType=this._surgeryService.getpatienttype();
         this.isolationPrecaution=this._surgeryService.getisolationprecaution();
+        // this.isecondaryphonetype=this._surgeryService.getisecondaryphonetype();
     }
 }
 

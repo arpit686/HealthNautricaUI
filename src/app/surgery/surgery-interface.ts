@@ -61,3 +61,4 @@ export interface IIsoltionPrecaution{
     name : string;
     value : string;
 }
+
